@@ -1,0 +1,64 @@
+Câu 1 : 
+a/ Thiết kế Tương tác là gì?
+1. Là quá trình thiết kế cách người dùng tương tác với phần mềm.
+
+2. Tập trung vào hành vi, thao tác và phản hồi của hệ thống với người dùng.
+
+3. Mục tiêu là tạo trải nghiệm mượt mà, hiệu quả và dễ sử dụng.
+
+b/Tầm quan trọng: 
+1. Tăng trải nghiệm người dùng :
+Giao diện thân thiện giúp người dùng hài lòng, sử dụng phần mềm lâu dài.
+2. Tăng hiệu suất và giảm lỗi sử dụng
+Thiết kế hợp lý giúp thao tác nhanh hơn, tránh nhầm lẫn và lỗi thao tác.
+3. Tạo lợi thế cạnh tranh và tăng uy tín
+UI đẹp, chuyên nghiệp giúp thu hút người dùng, tạo sự tin cậy và tăng cơ hội thành công.
+
+Câu2: 
+**1. Tương tác Người-Máy (Human-Computer Interaction - HCI) là gì?**
+
+* Là lĩnh vực nghiên cứu cách con người tương tác với máy tính và thiết kế các hệ thống máy tính thân thiện, dễ sử dụng.
+
+**2. Định nghĩa của ACM SIGCHI:**
+
+* HCI là "việc thiết kế, đánh giá và triển khai các hệ thống máy tính tương tác để con người sử dụng, và nghiên cứu các hiện tượng liên quan."
+
+**3. Mục tiêu nghiên cứu chính của HCI:**
+
+* Cải thiện sự tương tác giữa con người và máy tính.
+* Tăng tính hiệu quả, tiện lợi, an toàn và trải nghiệm người dùng khi sử dụng hệ thống.
+
+Câu 3:a / 
+1. Triết lý và các nguyên tắc cơ bản của Thiết kế Lấy Người dùng làm Trung tâm:
+Triết lý:
+Người dùng là trung tâm của quá trình thiết kế.
+Thiết kế phải dựa trên nhu cầu, mong muốn, hành vi và phản hồi của người dùng thực.
+Nguyên tắc cơ bản:
+Hiểu rõ người dùng: Nghiên cứu người dùng qua phỏng vấn, khảo sát, quan sát.
+Tham gia người dùng xuyên suốt: Người dùng được tham gia trong mọi giai đoạn phát triển.
+Thiết kế lặp lại: Thiết kế - thử nghiệm - cải tiến liên tục.
+Tập trung vào toàn bộ trải nghiệm: Không chỉ giao diện, mà cả quy trình và cảm nhận khi sử dụng.
+Thiết kế lấy bối cảnh sử dụng làm trọng tâm: Sản phẩm phải phù hợp với môi trường và tình huống thực tế của người dùng.
+
+b/
+2. Tại sao UCD lại quan trọng trong phát triển phần mềm?
+
+Lợi ích của UCD:
+
+Tăng sự hài lòng của người dùng: Sản phẩm dễ dùng, đúng nhu cầu.
+
+Giảm lỗi và chi phí chỉnh sửa: Vấn đề được phát hiện sớm trong giai đoạn thiết kế.
+
+Tăng khả năng chấp nhận và sử dụng phần mềm: Người dùng cảm thấy phần mềm “hợp lý” và tin tưởng.
+
+Tăng chất lượng sản phẩm: Thiết kế hiệu quả, cải thiện hiệu suất làm việc.
+
+Thách thức khi áp dụng UCD:
+
+Tốn thời gian và chi phí ban đầu: Cần khảo sát, phân tích và kiểm thử nhiều lần.
+
+Khó tiếp cận đúng người dùng mục tiêu: Việc thu thập dữ liệu từ người dùng không phải lúc nào cũng dễ.
+
+Xung đột giữa người dùng và nhóm phát triển: Ý kiến người dùng đôi khi trái ngược với yêu cầu kỹ thuật.
+
+Cần kỹ năng chuyên môn về UX/UI và nghiên cứu người dùng: Không phải nhóm nào cũng sẵn có nguồn lực phù hợp.

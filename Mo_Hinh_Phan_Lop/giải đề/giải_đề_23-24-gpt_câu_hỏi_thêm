@@ -61,25 +61,6 @@ Một entity có bao nhiêu @Id?
 Composite key dùng annotation nào?
 → @EmbeddedId hoặc @IdClass
 
-Câu 4: Trong mô hình MVC, lớp View có chức năng nào?     Đáp án đúng: B. Hiển thị CSDL
-A. Truy vấn CSDL → Là nhiệm vụ của Model hoặc DAO.
-B. Hiển thị CSDL ✅ → View dùng để hiển thị thông tin lên giao diện người dùng.
-C. Gọi model → Thường do Controller thực hiện.
-D. Nhận sự kiện  → Controller thường xử lý sự kiện và tương tác.
-
-View trong MVC là gì?→ Phần hiển thị dữ liệu cho người dùng.
-
-Controller có vai trò gì?
-→ Nhận yêu cầu, điều hướng dữ liệu, xử lý logic.
-
-Model trong MVC làm gì?
-→ Quản lý dữ liệu và logic nghiệp vụ.
-
-MVC giúp ích gì cho phát triển phần mềm?
-→ Tách biệt logic, dễ bảo trì, test.
-
-JSP thường đóng vai trò gì trong MVC?
-→ View.
 
 Câu 5: Dự án Windows theo kiến trúc n-tier thường có:
 Đáp án đúng: A. Windows form, Business Layer, Data Access Layer

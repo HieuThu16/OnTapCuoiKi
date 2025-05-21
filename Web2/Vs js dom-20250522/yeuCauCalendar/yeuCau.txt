@@ -1,0 +1,3 @@
+Cho bộ hình 10 chữ số theo phong cách con mèo được Gemini tạo.
+Dùng js tạo một trang lịch theo tháng. Mặc định là tháng hiện tại, có 2 mũi tên hiển thị tháng trước và và tháng sau (của tháng đang hiển thị).
+(Xem hình minh họa) 

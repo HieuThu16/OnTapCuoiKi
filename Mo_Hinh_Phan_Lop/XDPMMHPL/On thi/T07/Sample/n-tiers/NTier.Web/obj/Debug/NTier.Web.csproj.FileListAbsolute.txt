@@ -1,0 +1,22 @@
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Web.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Web.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\obj\Debug\NTier.Web.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\obj\Debug\NTier.Web.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Business.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Common.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.DAL.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Common.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.Business.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\5-Tier\bin\NTier.DAL.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Web.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Web.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Business.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Common.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.DAL.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Common.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.Business.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\bin\NTier.DAL.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\obj\Debug\NTier.Web.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\5-Tier\obj\Debug\NTier.Web.pdb

@@ -1,0 +1,10 @@
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\Common\bin\Debug\NTier.Common.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\Common\bin\Debug\NTier.Common.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\Common\obj\Debug\NTier.Common.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\Common\obj\Debug\NTier.Common.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\Common\bin\Debug\NTier.Common.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\Common\bin\Debug\NTier.Common.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\Common\obj\Debug\NTier.Common.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\Common\obj\Debug\NTier.Common.pdb

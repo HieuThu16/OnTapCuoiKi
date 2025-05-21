@@ -1,0 +1,18 @@
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.Business.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.Business.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\obj\Debug\NTier.Business.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\obj\Debug\NTier.Business.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.Common.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.Common.pdb
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.DAL.dll
+C:\Users\vivek\Desktop\OrderManagementSystem\5-Tier\NTier.Business\bin\Debug\NTier.DAL.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\NTier.Business.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Business.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Business.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Common.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.DAL.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Common.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.DAL.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\NTier.Business.pdb

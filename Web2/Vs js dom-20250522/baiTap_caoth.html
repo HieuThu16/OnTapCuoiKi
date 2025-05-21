@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Kiem tra du lieu nhap</title>
+<script>	
+function kiemTra() {
+	// cau b
+	if(document.frm.txtMatKhau.value.length < 6) {
+		alert('Mat khau toi thieu 6 ki tu');
+		return false;
+	}
+	
+	// cau c
+	if(document.frm.txtMatKhau.value != document.frm.txtNhapLaiMatKhau.value) {
+		alert('Mat khau chua khop');
+		return false;
+	}
+	
+	// cau d
+	if (document.frm.cboCauHoi.value != -1 &&
+		document.frm.txtTraLoi.value.length == 0) {
+		alert('Can nhap cau tra loi cho cau hoi bi mat');
+		return false;
+	}
+	
+	// cau g
+	if (document.frm.amNhac.checked == false &&
+		document.frm.duLich.checked == false &&
+		document.frm.nghienCuu.checked == false &&
+		document.frm.kinhDoanh.checked == false) {
+		alert('Phai chon it nhat 1 so thich');
+		return false;
+	}
+}
+function cauD(v) {
+	if(v == -1) {
+		document.frm.txtTraLoi.disabled = true;
+		document.frm.txtTraLoi.value = '';
+	}
+	else {
+		document.frm.txtTraLoi.disabled = false;
+	}
+}
+function cauF(v) {
+	s = '<option value="-1">[Chon Mot Nghe]</option>' +
+        '<option value="nam1">Nghe nam 1</option>' +
+        '<option value="nam2">Nghe nam 2</option>' +
+        '<option value="nam3">Nghe nam 3</option>';
+	if(v == 'Nu') {
+		s = '<option value="-1">[Chon Mot Nghe]</option>' +
+			'<option value="nu1">Nghe nu 1</option>' +
+			'<option value="nu2">Nghe nu 2</option>';
+	}
+	document.frm.cboNgheNghiep.innerHTML = s;
+}
+</script>
+</head>
+
+<body>
+<div style="width:640px; margin:0 auto">
+<table width="100%" border="0" align="center">
+  <tr>
+    <th width="100%" bgcolor="#003399"><h3>Dang Ki Nguoi Dung</h3></th>
+  </tr>
+</table>
+<form name="frm" action="xuly.php" method="post" onsubmit="return kiemTra();">
+<hr />
+<table width="100%" border="0">
+  <tr>
+    <td width="40%" align="right">Ten Dang Nhap </td>
+    <td width="60%" align="left"><input type="text" name="txtTenDangNhap" id="idtxtTenDangNhap" required/> <span style="color:red">*</span> </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Mat Khau </td>
+    <td width="60%" align="left"><input type="password" name="txtMatKhau" id="idtxtMatKhau"required/> <span style="color:red">*</span> </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right"></td>
+    <td width="60%" align="left">(Toi Thieu 6 Ki Tu)</td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Go Lai Mat Khau </td>
+    <td width="60%" align="left"><input type="password" name="txtNhapLaiMatKhau" id="idtxtNhapLaiMatKhau"required/> <span style="color:red">*</span> </td>
+  </tr>
+</table>
+<hr />
+<table width="100%" align="center">
+Nhap Thong Tin De Lay Lai Mat Khau Khi Quen<br>
+  <tr>
+    <td width="40%" align="right">Cau Hoi Bi Mat </td>
+    <td width="60%" align="left">
+    	<select name="cboCauHoi" id="idcboCauHoi" onchange="cauD(this.value);">
+        	<option value="-1">[Chon Mot Cau Hoi...]</option>
+        	<option value="1">Ban Thich Mau Gi Nhat</option>
+            <option value="2">Ban Thich An Gi Nhat</option>
+	        <option value="3">Ban Thich Choi Gi Nhat</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Tra Loi </td>
+    <td width="60%" align="left"><input type="text" name="txtTraLoi" id="idtxtTraLoi" disabled/></td>
+  </tr>
+</table>
+<hr />
+
+<table width="100%" align="center">
+Thong Tin Ca Nhan<br>
+  <tr>
+    <td width="40%" align="right">Ho Va Chu Lot </td>
+    <td width="60%" align="left"><input name="txtHoLot" type="text" /></td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Ten </td>
+    <td width="60%" align="left"><input name="txtTen" type="text" /></td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Ngay Sinh </td>
+    <td width="60%" align="left">
+    <input type="date" name="txtNamSinh"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Gioi Tinh </td>
+    <td width="60%" align="left">
+        <input type="radio" name="rdgioiTinh" value="Nam" checked="checked" onchange="cauF(this.value);"/>Nam 
+        <input type="radio" name="rdgioiTinh" value="Nu" onchange="cauF(this.value);"/>Nu
+    </td>
+  </tr>
+  <tr>
+    <td width="40%" align="right">Nghe Nghiep Lien Quan </td>
+    <td width="60%" align="left">
+    <select name="cboNgheNghiep" id="idcboNgheNghiep">
+    	<option value="-1">[Chon Mot Nghe]</option>
+        <option value="nam1">Nghe nam 1</option>
+        <option value="nam2">Nghe nam 2</option>
+        <option value="nam3">Nghe nam 3</option>
+    </select>
+    </td>
+  </tr>
+</table>
+<hr />
+<table width="100%" align="center">
+So Thich<br>
+  <tr>
+    <td width="40%" align="left"><input name="amNhac" type="checkbox" value="" /> Am Nhac</td>
+    <td width="60%" align="left"><input name="duLich" type="checkbox" value="" /> Du Lich</td>
+    <td width="0%"></td>
+  </tr>
+  <tr>
+    <td width="40%" align="left"><input name="nghienCuu" type="checkbox" value="" /> Nghien Cuu</td>
+    <td width="60%" align="left"><input name="kinhDoanh" type="checkbox" value="" /> Kinh Doanh</td>
+  </tr>
+</table>
+<hr />
+<table align="center">
+    <tr>
+        <td width="40%" align="right"><input name="btnSubmit" type="submit" value="Dang Ki" /></td>
+        <td width="60%" align="left"><input name="btnReset" type="reset" value="Xoa" /></td>
+    </tr>
+ </table>
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0px;
+}
+
+.bien{
+	border-right:#CC0000 2px dashed;
+}
+
+.tieude{
+	font-family:tahoma;
+	font-size:20px;
+	color:#000000;
+	font-weight:bold;
+}
+
+.noidung{
+	font-family:tahoma;
+	font-size:small;
+	color:#000000;
+	padding-left:10px;
+}

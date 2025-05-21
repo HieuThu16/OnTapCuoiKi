@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="5-Tier">
+</Property><Property Name="Solution File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\5-Tier.sln">
+</Property><Property Name="User Options File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\5-Tier.suo">
+</Property><Property Name="Date" Value="28 October 2012">
+</Property><Property Name="Time" Value="20:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="5-Tier.sln" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\5-Tier.sln">
+</Event><Event ErrorLevel="0" Project="" Source="5-Tier.suo" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\5-Tier.suo">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\5Tier.Business.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Business\5Tier.Business.csproj">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\5Tier.Business.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Business\5Tier.Business.csproj.user">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\Customer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Business\Customer.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\CustomerCollection.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Business\CustomerCollection.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Business\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\5Tier.Business.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="5Tier.Business" Source="NTier.Business\5Tier.Business.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\5Tier.DAL.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\5Tier.DAL.csproj">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\5Tier.DAL.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\5Tier.DAL.csproj.user">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\CustomerDAL.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\CustomerDAL.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\SQLHelper.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\SQLHelper.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\bin\Debug\NTier.DAL.dll" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\bin\Debug\NTier.DAL.dll">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\bin\Debug\NTier.DAL.pdb" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.DAL\bin\Debug\NTier.DAL.pdb">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\5Tier.DAL.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="5Tier.DAL" Source="NTier.DAL\5Tier.DAL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\5Tier.Common.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Common\5Tier.Common.csproj">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\5Tier.Common.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Common\5Tier.Common.csproj.user">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\DTO\CustomerDTO.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Common\DTO\CustomerDTO.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\LoadStatusEnum.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Common\LoadStatusEnum.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Common\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\5Tier.Common.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="5Tier.Common" Source="NTier.Common\5Tier.Common.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\5Tier.Web.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\5Tier.Web.csproj">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\5Tier.Web.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\5Tier.Web.csproj.user">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\Customer.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\Customer.aspx.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\Customer.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\Customer.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\showall.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\showall.aspx.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\showall.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\showall.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\customer.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\customer.aspx">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\showall.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\showall.aspx">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\Web.config" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\n-tiers\Backup\NTier.Web\Web.config">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\5Tier.Web.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="5Tier.Web" Source="NTier.Web\5Tier.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="5-Tier.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="5-Tier.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="5Tier.Business" Source="NTier.Business\5Tier.Business.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="5Tier.DAL" Source="NTier.DAL\5Tier.DAL.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="5Tier.Common" Source="NTier.Common\5Tier.Common.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="5Tier.Web" Source="NTier.Web\5Tier.Web.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

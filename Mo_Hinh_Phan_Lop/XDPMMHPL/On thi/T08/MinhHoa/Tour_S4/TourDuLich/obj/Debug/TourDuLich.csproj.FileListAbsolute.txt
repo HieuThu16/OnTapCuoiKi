@@ -1,0 +1,67 @@
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\bin\Debug\TourDuLich.exe
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\bin\Debug\TourDuLich.pdb
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.exe
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.pdb
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+C:\Users\HT\Documents\Visual Studio 2008\Projects\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.exe
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.pdb
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\bin\Debug\TourDuLich.exe
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\bin\Debug\TourDuLich.pdb
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\ResolveAssemblyReference.cache
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\Xay dung phan mem\DoAn\TourDuLich\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\bin\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\bin\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\fromThao\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\bin\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\bin\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T04\MinhHoa_7\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\bin\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\bin\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.csprojResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T06\Ref\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\bin\Debug\TourDuLich.exe.config
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\bin\Debug\TourDuLich.exe
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\bin\Debug\TourDuLich.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.csprojResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.FormDanhMucDiaDiem.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.FormDanhMucTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.FormMain.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.Properties.Resources.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.FormTour.resources
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\MinhHoa\Tour_S4\TourDuLich\obj\Debug\TourDuLich.csproj.GenerateResource.Cache

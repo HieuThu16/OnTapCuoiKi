@@ -1,0 +1,10 @@
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveC2\LiveC2\bin\LiveC2.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveC2\LiveC2\bin\LiveC2.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\LiveC2.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\LiveC2.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\LinQ\MinhHoa\LiveC2\LiveC2\bin\LiveC2.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\LinQ\MinhHoa\LiveC2\LiveC2\bin\LiveC2.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\LiveC2.csprojResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\LiveC2.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT110\T08\LinQ\MinhHoa\LiveC2\LiveC2\obj\Debug\LiveC2.pdb

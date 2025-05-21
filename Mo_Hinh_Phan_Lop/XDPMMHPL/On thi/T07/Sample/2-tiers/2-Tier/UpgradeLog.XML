@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="2-Tier">
+</Property><Property Name="Solution File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\2-Tier.sln">
+</Property><Property Name="User Options File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\2-Tier.suo">
+</Property><Property Name="Date" Value="28 October 2012">
+</Property><Property Name="Time" Value="20:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="2-Tier.sln" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\2-Tier.sln">
+</Event><Event ErrorLevel="0" Project="" Source="2-Tier.suo" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\2-Tier.suo">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="OMS.WebTier.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.WebTier.csproj">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="OMS.WebTier.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.WebTier.csproj.user">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="Customer.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\Customer.aspx.cs">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="Customer.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\Customer.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="showall.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\showall.aspx.cs">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="showall.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\showall.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="customer.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\customer.aspx">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="showall.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\showall.aspx">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="Web.config" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="OMS.WebTier.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OMS.WebTier" Source="OMS.WebTier.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\OMS.CodeTier.csproj">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\OMS.CodeTier.csproj.user">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\BL\Customer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\BL\Customer.cs">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\DAL\CustomerDAL.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\DAL\CustomerDAL.cs">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\DAL\SQLHelper.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\DAL\SQLHelper.cs">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\2-tiers\2-Tier\Backup\OMS.CodeTier\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="2-Tier.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="2-Tier.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OMS.WebTier" Source="OMS.WebTier.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="OMS.CodeTier" Source="..\CodeLibrary\OMS.CodeTier.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

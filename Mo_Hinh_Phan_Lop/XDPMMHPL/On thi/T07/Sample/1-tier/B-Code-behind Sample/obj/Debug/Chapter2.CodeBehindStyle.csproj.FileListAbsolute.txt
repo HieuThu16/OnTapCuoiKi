@@ -1,0 +1,5 @@
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\B-Code-behind Sample\bin\Chapter2.CodeBehindStyle.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\B-Code-behind Sample\bin\Chapter2.CodeBehindStyle.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\B-Code-behind Sample\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\B-Code-behind Sample\obj\Debug\Chapter2.CodeBehindStyle.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\B-Code-behind Sample\obj\Debug\Chapter2.CodeBehindStyle.pdb

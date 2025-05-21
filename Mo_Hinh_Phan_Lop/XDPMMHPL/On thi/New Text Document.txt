@@ -1,0 +1,9 @@
+Nôòi dung thi lyì thuyêìt (thi 90' ğıõòc sıÒ duòng tài liêòu giâìy): 
+mô hiÌnh 3 lõìp
+mô hiÌnh MVC ASPX
+.NET data entity framework.
+
+so sánh asp.net và asp.net mvc => ıu, nhıõòc và khi nào sıÒ duòng
+? ADO.NET entity framework provides entity classes
+? How do we use these classes in 3-layer model ?
+áp duòng mô hiÌnh 3 lõìp vào MVC, áp duòng .NET entity framework vào MVC

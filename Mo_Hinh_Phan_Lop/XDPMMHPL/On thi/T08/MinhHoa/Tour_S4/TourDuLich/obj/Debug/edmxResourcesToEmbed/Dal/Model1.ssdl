@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="TourDBModelStoreContainer">
+    <EntitySet Name="DanhSachDiemThamQuan" EntityType="TourDBModel.Store.DanhSachDiemThamQuan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DiaDiem" EntityType="TourDBModel.Store.DiaDiem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GiaTour" EntityType="TourDBModel.Store.GiaTour" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LoaiTour" EntityType="TourDBModel.Store.LoaiTour" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="TourDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tour" EntityType="TourDBModel.Store.Tour" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_DanhSachDiemThamQuan_DiaDiem" Association="TourDBModel.Store.FK_DanhSachDiemThamQuan_DiaDiem">
+      <End Role="DiaDiem" EntitySet="DiaDiem" />
+      <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DanhSachDiemThamQuan_Tour" Association="TourDBModel.Store.FK_DanhSachDiemThamQuan_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GiaTour_Tour" Association="TourDBModel.Store.FK_GiaTour_Tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="GiaTour" EntitySet="GiaTour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_LoaiTour" Association="TourDBModel.Store.FK_Tour_LoaiTour">
+      <End Role="LoaiTour" EntitySet="LoaiTour" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DanhSachDiemThamQuan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TourId" Type="int" Nullable="false" />
+    <Property Name="DiaDiemId" Type="int" Nullable="false" />
+    <Property Name="Stt" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiaDiem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MaDiaDiem" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TenDiaDiem" Type="nvarchar" MaxLength="256" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="GiaTour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GiaTri" Type="money" Nullable="false" />
+    <Property Name="ThoiGianBatDau" Type="datetime" Nullable="false" />
+    <Property Name="ThoiGianKetThuc" Type="datetime" Nullable="false" />
+    <Property Name="DangApDung" Type="bit" Nullable="false" />
+    <Property Name="TourId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiTour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaLoaiTour" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TenLoaiTour" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="MaTour" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TenTour" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoaiTourId" Type="int" Nullable="false" />
+    <Property Name="LaTourTrongNuoc" Type="bit" />
+  </EntityType>
+  <Association Name="FK_DanhSachDiemThamQuan_DiaDiem">
+    <End Role="DiaDiem" Type="TourDBModel.Store.DiaDiem" Multiplicity="1" />
+    <End Role="DanhSachDiemThamQuan" Type="TourDBModel.Store.DanhSachDiemThamQuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DiaDiem">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DanhSachDiemThamQuan">
+        <PropertyRef Name="DiaDiemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DanhSachDiemThamQuan_Tour">
+    <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="1" />
+    <End Role="DanhSachDiemThamQuan" Type="TourDBModel.Store.DanhSachDiemThamQuan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DanhSachDiemThamQuan">
+        <PropertyRef Name="TourId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GiaTour_Tour">
+    <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="1" />
+    <End Role="GiaTour" Type="TourDBModel.Store.GiaTour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GiaTour">
+        <PropertyRef Name="TourId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_LoaiTour">
+    <End Role="LoaiTour" Type="TourDBModel.Store.LoaiTour" Multiplicity="1" />
+    <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiTour">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="LoaiTourId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

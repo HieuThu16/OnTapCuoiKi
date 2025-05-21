@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OMS-2-Layer">
+</Property><Property Name="Solution File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\OMS-2-Layer.sln">
+</Property><Property Name="User Options File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\OMS-2-Layer.suo">
+</Property><Property Name="Date" Value="28 October 2012">
+</Property><Property Name="Time" Value="20:49">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="OMS-2-Layer.sln" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\OMS-2-Layer.sln">
+</Event><Event ErrorLevel="0" Project="" Source="OMS-2-Layer.suo" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\OMS-2-Layer.suo">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="OMS-2-Layer.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\OMS-2-Layer.csproj">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="OMS-2-Layer.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\OMS-2-Layer.csproj.user">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="Code\DAL.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\Code\DAL.cs">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="ProductList.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\ProductList.aspx.cs">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="ProductList.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\ProductList.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="ProductList.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\ProductList.aspx">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="Web.config" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\D-2-Layer\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="OMS-2-Layer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OMS-2-Layer" Source="OMS-2-Layer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="OMS-2-Layer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="OMS-2-Layer.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OMS-2-Layer" Source="OMS-2-Layer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

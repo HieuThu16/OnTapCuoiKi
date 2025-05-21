@@ -1,0 +1,5 @@
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 2\Code-behind Sample\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 2\Code-behind Sample\bin\Chapter2.InlineCoding.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 2\Code-behind Sample\bin\Chapter2.InlineCoding.pdb
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 2\Code-behind Sample\obj\Debug\Chapter2.InlineCoding.dll
+C:\Documents and Settings\Vivek\Desktop\My Book\Code\Chapter 2\Code-behind Sample\obj\Debug\Chapter2.InlineCoding.pdb

@@ -1,0 +1,10 @@
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\D-2-Layer\bin\OMS-2-Layer.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\D-2-Layer\bin\OMS-2-Layer.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\D-2-Layer\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\D-2-Layer\obj\Debug\OMS-2-Layer.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\D-2-Layer\obj\Debug\OMS-2-Layer.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\D-2-Layer\bin\OMS-2-Layer.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\D-2-Layer\bin\OMS-2-Layer.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\D-2-Layer\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\D-2-Layer\obj\Debug\OMS-2-Layer.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\D-2-Layer\obj\Debug\OMS-2-Layer.pdb

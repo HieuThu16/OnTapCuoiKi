@@ -1,0 +1,25 @@
+E:\My Book\Code\Chapter 03\OMS 3-Layer DomainModel\bin\DomainModel.dll
+E:\My Book\Code\Chapter 03\OMS 3-Layer DomainModel\bin\DomainModel.pdb
+E:\My Book\Code\Chapter 03\OMS 3-Layer DomainModel\obj\Debug\ResolveAssemblyReference.cache
+E:\My Book\Code\Chapter 03\OMS 3-Layer DomainModel\obj\Debug\DomainModel.dll
+E:\My Book\Code\Chapter 03\OMS 3-Layer DomainModel\obj\Debug\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\fromaVuong\2008\OMS 3-Layer DomainModel\bin\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\fromaVuong\2008\OMS 3-Layer DomainModel\bin\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\fromaVuong\2008\OMS 3-Layer DomainModel\bin\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\fromaVuong\2008\OMS 3-Layer DomainModel\bin\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\T05\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\fromaVuong\2008\OMS 3-Layer DomainModel\obj\Debug\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\bin\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\bin\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\bin\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\bin\DomainModel.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\DomainModel.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\E-OMS 3-Layer DomainModel\obj\Debug\DomainModel.pdb

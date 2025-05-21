@@ -1,0 +1,10 @@
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\2-tiers\CodeLibrary\bin\Debug\OMS.CodeTier.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\2-tiers\CodeLibrary\bin\Debug\OMS.CodeTier.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\2-tiers\CodeLibrary\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\2-tiers\CodeLibrary\obj\Debug\OMS.CodeTier.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\2-tiers\CodeLibrary\obj\Debug\OMS.CodeTier.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\2-tiers\CodeLibrary\bin\Debug\OMS.CodeTier.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\2-tiers\CodeLibrary\bin\Debug\OMS.CodeTier.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\2-tiers\CodeLibrary\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\2-tiers\CodeLibrary\obj\Debug\OMS.CodeTier.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\2-tiers\CodeLibrary\obj\Debug\OMS.CodeTier.pdb

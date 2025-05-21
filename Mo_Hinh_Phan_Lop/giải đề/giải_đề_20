@@ -1,0 +1,153 @@
+
+
+
+MVC là viết tắt của:
+
+* **M – Model**: Xử lý dữ liệu và logic nghiệp vụ.
+* **V – View**: Giao diện người dùng.
+* **C – Controller**: Cầu nối giữa View và Model, xử lý hành động từ người dùng.
+
+---
+
+## 🧱 **2. Vai trò & Nhiệm vụ của từng thành phần**
+
+### ✅ **1. View (Giao diện người dùng)**
+
+📌 **Chức năng chính:**
+
+* Hiển thị thông tin cho người dùng (từ Model).
+* Nhận input từ người dùng (qua nút bấm, nhập form,...).
+* Không xử lý logic nghiệp vụ hoặc dữ liệu.
+
+📍 **Ví dụ:**
+
+* Một trang đăng nhập hiển thị 2 ô nhập (username, password) và nút "Đăng nhập".
+* Người dùng nhập và nhấn nút → View gửi sự kiện này cho Controller.
+
+---
+
+### ✅ **2. Controller (Bộ xử lý điều hướng)**
+
+📌 **Chức năng chính:**
+
+* Nhận sự kiện từ View (click, submit,...).
+* Gọi Model để xử lý dữ liệu theo yêu cầu.
+* Chọn View phù hợp để trả lại kết quả cho người dùng.
+
+📍 **Ví dụ:**
+
+* Người dùng bấm nút "Đăng nhập".
+* Controller nhận thông tin tài khoản → gửi cho Model kiểm tra → nhận kết quả (thành công/thất bại) → trả về View hiển thị thông báo tương ứng.
+
+---
+
+### ✅ **3. Model (Xử lý dữ liệu và nghiệp vụ)**
+
+📌 **Chức năng chính:**
+
+* Xử lý nghiệp vụ: đăng nhập, tính toán, xác thực,...
+* Truy xuất, cập nhật, lưu trữ dữ liệu từ Database.
+* Không biết gì về UI (View), chỉ tập trung vào dữ liệu.
+
+📍 **Ví dụ:**
+
+* Hàm kiểm tra tài khoản đăng nhập trong Model:
+
+  ```java
+  public boolean checkLogin(String username, String password) {
+      // so sánh với dữ liệu trong CSDL
+  }
+  ```
+
+---
+
+## 📊 **3. Sơ đồ dòng dữ liệu MVC (tóm tắt)**
+
+```
+User (người dùng)
+     ↓
+  [View]  → nhận sự kiện
+     ↓
+[Controller] → xử lý hành động
+     ↓
+   [Model] → xử lý logic + truy vấn DB
+     ↑
+  Trả dữ liệu
+     ↓
+[Controller] → cập nhật
+     ↓
+  [View] → hiển thị kết quả cho người dùng
+```
+
+---
+
+## 💡 **Tình huống thực tế - Đăng nhập**
+
+| Thành phần     | Thao tác                                                             |
+| -------------- | -------------------------------------------------------------------- |
+| **View**       | Người dùng nhập email và password rồi click "Login"                  |
+| **Controller** | Nhận input → gọi `UserModel.checkLogin(email, pass)`                 |
+| **Model**      | Kiểm tra thông tin trong database → trả true/false                   |
+| **Controller** | Nhận kết quả → chọn View hiển thị thông báo thành công hoặc thất bại |
+
+---
+
+## 📌 **Tóm gọn nhiệm vụ của mỗi phần:**
+
+| Thành phần     | Vai trò chính                         | Không nên làm                                             |
+| -------------- | ------------------------------------- | --------------------------------------------------------- |
+| **View**       | Hiển thị & nhận input                 | Không xử lý logic, không truy vấn DB                      |
+| **Controller** | Điều phối hoạt động giữa View ↔ Model | Không xử lý logic phức tạp, không thao tác CSDL trực tiếp |
+| **Model**      | Xử lý logic, truy vấn DB              | Không biết về giao diện                                   |
+
+---
+
+Câu 4: Xác định kiểu quan hệ giữa lớp sản phẩm và hóa đơn?
+📌 Đáp án được khoanh: b. Aggregation
+✅ Phân tích:
+Aggregation (tập hợp):
+
+Là quan hệ "has-a" giữa 2 lớp.
+
+Một đối tượng có thể chứa đối tượng khác, nhưng nếu đối tượng cha bị xóa thì đối tượng con vẫn tồn tại.
+
+Ví dụ: Một Hóa đơn có nhiều Sản phẩm, nhưng sản phẩm có thể tồn tại độc lập với hóa đơn (vẫn được lưu trong hệ thống, bán cho hóa đơn khác).
+
+Composition:
+
+Quan hệ "chặt chẽ" hơn. Nếu đối tượng cha bị xóa thì đối tượng con cũng bị xóa theo.
+
+Ví dụ: Một Ngôi nhà có Phòng. Khi xóa nhà thì các phòng cũng không còn.
+
+Dependency:
+
+Quan hệ phụ thuộc tạm thời, không phải quan hệ sở hữu.
+
+Dùng khi một lớp sử dụng tạm thời một lớp khác (ví dụ như truyền tham số vào hàm).
+
+Không có:
+
+Không hợp lý trong trường hợp này, vì rõ ràng có mối quan hệ giữa Hóa đơn và Sản phẩm.
+
+👉 ✅ Kết luận: Đáp án B – Aggregation là đúng.
+
+✅ Câu 5: Điều gì thực hiện trong giai đoạn thiết kế?
+📌 Đáp án được khoanh: c. Lập kế hoạch giải pháp, giao diện phần mềm
+✅ Phân tích:
+Giai đoạn thiết kế (Design phase) trong vòng đời phát triển phần mềm thường gồm:
+
+Phân tích kiến trúc tổng thể hệ thống.
+
+Lựa chọn công nghệ, mô hình.
+
+Thiết kế các thành phần, chức năng, giao diện, sơ đồ lớp, luồng xử lý, CSDL,...
+
+Phân tích các đáp án:
+
+Đáp án	Nội dung	Đúng không?
+a. Thực hiện viết mã	Là giai đoạn triển khai (implementation), không phải thiết kế.	❌
+b. Thực hiện thay đổi sau khi phần mềm đã tạo	Thuộc về bảo trì (maintenance)	❌
+c. Lập kế hoạch giải pháp, giao diện phần mềm	Đúng mô tả về giai đoạn thiết kế (design).	✅
+d. Đảm bảo các yêu cầu được hiểu rõ	Thuộc về giai đoạn phân tích yêu cầu (requirement analysis)	❌
+
+👉 ✅ Kết luận: Đáp án C là chính xác.

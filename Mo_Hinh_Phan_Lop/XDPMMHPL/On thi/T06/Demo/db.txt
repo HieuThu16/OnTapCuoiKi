@@ -1,0 +1,5 @@
+﻿SQLEXPRESS2K5_2N
+SqlConnection conn = new SqlConnection(
+                @"Data Source=CAOTH-LAPTOP\SQLEXPRESS2K5_2N;Initial Catalog=TourDB;User ID=sa;Password=sa");
+
+Lưu ý các bạn tự tạo cơ sở dữ liệu và chỉnh lại connection trong lớp Dal

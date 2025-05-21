@@ -1,0 +1,15 @@
+E:\My Book\Code\Chapter 02\InlineCoding Sample\bin\Chapter2.InlineCoding.dll
+E:\My Book\Code\Chapter 02\InlineCoding Sample\bin\Chapter2.InlineCoding.pdb
+E:\My Book\Code\Chapter 02\InlineCoding Sample\obj\Debug\ResolveAssemblyReference.cache
+E:\My Book\Code\Chapter 02\InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.dll
+E:\My Book\Code\Chapter 02\InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\A-InlineCoding Sample\bin\Chapter2.InlineCoding.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\A-InlineCoding Sample\bin\Chapter2.InlineCoding.pdb
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.dll
+E:\SGU\GiangDay\XDPM_MHPL\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\A-InlineCoding Sample\bin\Chapter2.InlineCoding.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\A-InlineCoding Sample\bin\Chapter2.InlineCoding.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\1-tier\A-InlineCoding Sample\obj\Debug\Chapter2.InlineCoding.pdb

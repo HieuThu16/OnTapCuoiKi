@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DomainModel">
+</Property><Property Name="Solution File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\DomainModel.sln">
+</Property><Property Name="User Options File" Value="E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\DomainModel.suo">
+</Property><Property Name="Date" Value="28 October 2012">
+</Property><Property Name="Time" Value="20:49">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DomainModel.sln" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DomainModel.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DomainModel.suo" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DomainModel.suo">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DomainModel.csproj" Description="Project file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DomainModel.csproj">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DomainModel.csproj.user" Description="Project user file successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DomainModel.csproj.user">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="datasource-customers.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\datasource-customers.aspx.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="datasource-customers.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\datasource-customers.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="showall.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\showall.aspx.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="showall.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\showall.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="BL\Customer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\BL\Customer.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DAL\CustomerDAL.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DAL\CustomerDAL.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DAL\SQLHelper.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\DAL\SQLHelper.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="Customer.aspx.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\Customer.aspx.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="Customer.aspx.designer.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\Customer.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="datasource-customers.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\datasource-customers.aspx">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="showall.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\showall.aspx">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="customer.aspx" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\customer.aspx">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="Web.config" Description="File successfully backed up as E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\Sample\1-tier\E-OMS 3-Layer DomainModel\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DomainModel.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DomainModel" Source="DomainModel.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DomainModel.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DomainModel.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DomainModel" Source="DomainModel.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

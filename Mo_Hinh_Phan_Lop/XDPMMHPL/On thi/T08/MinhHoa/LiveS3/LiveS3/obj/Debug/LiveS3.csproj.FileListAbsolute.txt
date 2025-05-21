@@ -1,0 +1,5 @@
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveS3\LiveS3\bin\LiveS3.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveS3\LiveS3\bin\LiveS3.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveS3\LiveS3\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveS3\LiveS3\obj\Debug\LiveS3.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT109\T08\LinQ\MinhHoa\LiveS3\LiveS3\obj\Debug\LiveS3.pdb

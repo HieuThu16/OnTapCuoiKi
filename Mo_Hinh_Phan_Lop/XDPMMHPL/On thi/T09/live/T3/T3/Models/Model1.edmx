@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TourDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TourDBModelStoreContainer">
+          <EntitySet Name="DanhSachDiemThamQuan" EntityType="TourDBModel.Store.DanhSachDiemThamQuan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DiaDiem" EntityType="TourDBModel.Store.DiaDiem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GiaTour" EntityType="TourDBModel.Store.GiaTour" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LoaiTour" EntityType="TourDBModel.Store.LoaiTour" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tour" EntityType="TourDBModel.Store.Tour" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_DanhSachDiemThamQuan_DiaDiem" Association="TourDBModel.Store.FK_DanhSachDiemThamQuan_DiaDiem">
+            <End Role="DiaDiem" EntitySet="DiaDiem" />
+            <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DanhSachDiemThamQuan_Tour" Association="TourDBModel.Store.FK_DanhSachDiemThamQuan_Tour">
+            <End Role="Tour" EntitySet="Tour" />
+            <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GiaTour_Tour" Association="TourDBModel.Store.FK_GiaTour_Tour">
+            <End Role="Tour" EntitySet="Tour" />
+            <End Role="GiaTour" EntitySet="GiaTour" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tour_LoaiTour" Association="TourDBModel.Store.FK_Tour_LoaiTour">
+            <End Role="LoaiTour" EntitySet="LoaiTour" />
+            <End Role="Tour" EntitySet="Tour" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DanhSachDiemThamQuan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TourId" Type="int" Nullable="false" />
+          <Property Name="DiaDiemId" Type="int" Nullable="false" />
+          <Property Name="Stt" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DiaDiem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="MaDiaDiem" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="TenDiaDiem" Type="nvarchar" MaxLength="256" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="GiaTour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GiaTri" Type="money" Nullable="false" />
+          <Property Name="ThoiGianBatDau" Type="datetime" Nullable="false" />
+          <Property Name="ThoiGianKetThuc" Type="datetime" Nullable="false" />
+          <Property Name="DangApDung" Type="bit" Nullable="false" />
+          <Property Name="TourId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LoaiTour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoaiTour" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="TenLoaiTour" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Tour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="MaTour" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="TenTour" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LoaiTourId" Type="int" Nullable="false" />
+          <Property Name="LaTourTrongNuoc" Type="bit" />
+        </EntityType>
+        <Association Name="FK_DanhSachDiemThamQuan_DiaDiem">
+          <End Role="DiaDiem" Type="TourDBModel.Store.DiaDiem" Multiplicity="1" />
+          <End Role="DanhSachDiemThamQuan" Type="TourDBModel.Store.DanhSachDiemThamQuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiaDiem">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachDiemThamQuan">
+              <PropertyRef Name="DiaDiemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DanhSachDiemThamQuan_Tour">
+          <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="1" />
+          <End Role="DanhSachDiemThamQuan" Type="TourDBModel.Store.DanhSachDiemThamQuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachDiemThamQuan">
+              <PropertyRef Name="TourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GiaTour_Tour">
+          <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="1" />
+          <End Role="GiaTour" Type="TourDBModel.Store.GiaTour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GiaTour">
+              <PropertyRef Name="TourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tour_LoaiTour">
+          <End Role="LoaiTour" Type="TourDBModel.Store.LoaiTour" Multiplicity="1" />
+          <End Role="Tour" Type="TourDBModel.Store.Tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="LoaiTourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TourDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TourDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DanhSachDiemThamQuans" EntityType="TourDBModel.DanhSachDiemThamQuan" />
+          <EntitySet Name="DiaDiems" EntityType="TourDBModel.DiaDiem" />
+          <EntitySet Name="GiaTours" EntityType="TourDBModel.GiaTour" />
+          <EntitySet Name="LoaiTours" EntityType="TourDBModel.LoaiTour" />
+          <EntitySet Name="Tours" EntityType="TourDBModel.Tour" />
+          <AssociationSet Name="FK_DanhSachDiemThamQuan_DiaDiem" Association="TourDBModel.FK_DanhSachDiemThamQuan_DiaDiem">
+            <End Role="DiaDiem" EntitySet="DiaDiems" />
+            <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DanhSachDiemThamQuan_Tour" Association="TourDBModel.FK_DanhSachDiemThamQuan_Tour">
+            <End Role="Tour" EntitySet="Tours" />
+            <End Role="DanhSachDiemThamQuan" EntitySet="DanhSachDiemThamQuans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GiaTour_Tour" Association="TourDBModel.FK_GiaTour_Tour">
+            <End Role="Tour" EntitySet="Tours" />
+            <End Role="GiaTour" EntitySet="GiaTours" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tour_LoaiTour" Association="TourDBModel.FK_Tour_LoaiTour">
+            <End Role="LoaiTour" EntitySet="LoaiTours" />
+            <End Role="Tour" EntitySet="Tours" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DanhSachDiemThamQuan">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TourId" Type="Int32" Nullable="false" />
+          <Property Name="DiaDiemId" Type="Int32" Nullable="false" />
+          <Property Name="Stt" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="DiaDiem" Relationship="TourDBModel.FK_DanhSachDiemThamQuan_DiaDiem" FromRole="DanhSachDiemThamQuan" ToRole="DiaDiem" />
+          <NavigationProperty Name="Tour" Relationship="TourDBModel.FK_DanhSachDiemThamQuan_Tour" FromRole="DanhSachDiemThamQuan" ToRole="Tour" />
+        </EntityType>
+        <EntityType Name="DiaDiem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="MaDiaDiem" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="TenDiaDiem" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="DanhSachDiemThamQuans" Relationship="TourDBModel.FK_DanhSachDiemThamQuan_DiaDiem" FromRole="DiaDiem" ToRole="DanhSachDiemThamQuan" />
+        </EntityType>
+        <EntityType Name="GiaTour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GiaTri" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ThoiGianBatDau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ThoiGianKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DangApDung" Type="Boolean" Nullable="false" />
+          <Property Name="TourId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tour" Relationship="TourDBModel.FK_GiaTour_Tour" FromRole="GiaTour" ToRole="Tour" />
+        </EntityType>
+        <EntityType Name="LoaiTour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoaiTour" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="TenLoaiTour" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Tours" Relationship="TourDBModel.FK_Tour_LoaiTour" FromRole="LoaiTour" ToRole="Tour" />
+        </EntityType>
+        <EntityType Name="Tour">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="MaTour" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="TenTour" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LoaiTourId" Type="Int32" Nullable="false" />
+          <Property Name="LaTourTrongNuoc" Type="Boolean" />
+          <NavigationProperty Name="DanhSachDiemThamQuans" Relationship="TourDBModel.FK_DanhSachDiemThamQuan_Tour" FromRole="Tour" ToRole="DanhSachDiemThamQuan" />
+          <NavigationProperty Name="GiaTours" Relationship="TourDBModel.FK_GiaTour_Tour" FromRole="Tour" ToRole="GiaTour" />
+          <NavigationProperty Name="LoaiTour" Relationship="TourDBModel.FK_Tour_LoaiTour" FromRole="Tour" ToRole="LoaiTour" />
+        </EntityType>
+        <Association Name="FK_DanhSachDiemThamQuan_DiaDiem">
+          <End Role="DiaDiem" Type="TourDBModel.DiaDiem" Multiplicity="1" />
+          <End Role="DanhSachDiemThamQuan" Type="TourDBModel.DanhSachDiemThamQuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DiaDiem">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachDiemThamQuan">
+              <PropertyRef Name="DiaDiemId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DanhSachDiemThamQuan_Tour">
+          <End Role="Tour" Type="TourDBModel.Tour" Multiplicity="1" />
+          <End Role="DanhSachDiemThamQuan" Type="TourDBModel.DanhSachDiemThamQuan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DanhSachDiemThamQuan">
+              <PropertyRef Name="TourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GiaTour_Tour">
+          <End Role="Tour" Type="TourDBModel.Tour" Multiplicity="1" />
+          <End Role="GiaTour" Type="TourDBModel.GiaTour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="GiaTour">
+              <PropertyRef Name="TourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tour_LoaiTour">
+          <End Role="LoaiTour" Type="TourDBModel.LoaiTour" Multiplicity="1" />
+          <End Role="Tour" Type="TourDBModel.Tour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiTour">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tour">
+              <PropertyRef Name="LoaiTourId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TourDBModelStoreContainer" CdmEntityContainer="TourDBEntities">
+          <EntitySetMapping Name="DanhSachDiemThamQuans">
+            <EntityTypeMapping TypeName="TourDBModel.DanhSachDiemThamQuan">
+              <MappingFragment StoreEntitySet="DanhSachDiemThamQuan">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TourId" ColumnName="TourId" />
+                <ScalarProperty Name="DiaDiemId" ColumnName="DiaDiemId" />
+                <ScalarProperty Name="Stt" ColumnName="Stt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiaDiems">
+            <EntityTypeMapping TypeName="TourDBModel.DiaDiem">
+              <MappingFragment StoreEntitySet="DiaDiem">
+                <ScalarProperty Name="MaDiaDiem" ColumnName="MaDiaDiem" />
+                <ScalarProperty Name="TenDiaDiem" ColumnName="TenDiaDiem" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GiaTours">
+            <EntityTypeMapping TypeName="TourDBModel.GiaTour">
+              <MappingFragment StoreEntitySet="GiaTour">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+                <ScalarProperty Name="ThoiGianBatDau" ColumnName="ThoiGianBatDau" />
+                <ScalarProperty Name="ThoiGianKetThuc" ColumnName="ThoiGianKetThuc" />
+                <ScalarProperty Name="DangApDung" ColumnName="DangApDung" />
+                <ScalarProperty Name="TourId" ColumnName="TourId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiTours">
+            <EntityTypeMapping TypeName="TourDBModel.LoaiTour">
+              <MappingFragment StoreEntitySet="LoaiTour">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MaLoaiTour" ColumnName="MaLoaiTour" />
+                <ScalarProperty Name="TenLoaiTour" ColumnName="TenLoaiTour" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tours">
+            <EntityTypeMapping TypeName="TourDBModel.Tour">
+              <MappingFragment StoreEntitySet="Tour">
+                <ScalarProperty Name="MaTour" ColumnName="MaTour" />
+                <ScalarProperty Name="TenTour" ColumnName="TenTour" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LoaiTourId" ColumnName="LoaiTourId" />
+                <ScalarProperty Name="LaTourTrongNuoc" ColumnName="LaTourTrongNuoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

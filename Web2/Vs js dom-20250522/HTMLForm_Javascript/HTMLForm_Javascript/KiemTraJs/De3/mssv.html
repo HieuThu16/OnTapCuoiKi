@@ -1,0 +1,178 @@
+<!-- 
+Bai kiem tra javascript
+Mon Lap trinh Web
+MSSV: <<Sinh Vien dien vao>>
+Ho Ten: <<Sinh Vien dien vao>>
+
+Ngay : 03. ---, 2010 -->
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Javascript</title>
+
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="" />
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/structure.css" type="text/css" />
+<link rel="stylesheet" href="css/form.css" type="text/css" />
+
+</head>
+
+<body id="public">
+<div id="container">
+
+
+<form id="form24" name="form24" class="sgu  page" autocomplete="off"
+	enctype="multipart/form-data" method="post" action="#public">
+
+<div class="info">
+<h2 align="center">Phiếu đặt phòng</h2>
+<div></div>
+</div>
+
+<ul>
+
+
+
+	<li id="foli5" class="     "><label class="desc" id="title5"
+		for="Field5"> Họ tên *</label>
+	<div class="col"><input id="Field5" name="Field5" type="text"
+		class="field text large" value="" maxlength="255" tabindex="1"
+		onkeyup="" /></div>
+	</li>
+	<li id="foli51" class="     "><label class="desc" id="title51"
+		for="Field51"> Địa chỉ</label>
+	<div class="col"><input id="Field51" name="Field51" type="text"
+		class="field text large" value="" maxlength="255" tabindex="2"
+		onkeyup="" /></div>
+	</li>
+	<li id="foli51" class="     "><label class="desc" id="title51"
+		for="Field51"> Số chứng minh nhân dân *</label>
+	<div class="col"><input id="Field51" name="Field51" type="text"
+		class="field text large" value="" maxlength="255" tabindex="3"
+		onkeyup="" /></div>
+	</li>
+
+	<li id="foli14" class="leftHalf      "><label class="desc"
+		id="title14" for="Field14"> Mức giá </label>
+	<div><select id="Field14" name="Field14"
+		class="field select medium" tabindex="4">
+		<option value="Planning">Loại thường</option>
+		<option value="In Progress">Loại sang trọng</option>
+		<option value="Finished">Loại đặc biệt</option>
+	</select></div>
+	</li>
+
+
+	<li id="foli7" class="rightHalf      "><label class="desc"
+		id="title7" for="Field7"> Loại phòng </label>
+	<div><select id="Field7" name="Field7"
+		class="field select medium" tabindex="5">
+		<option value="Phòng đơn">Phòng đơn</option>
+		<option value="Phòng đôi">Phòng đôi</option>
+		<option value="Phòng tập thể">Phòng tập thể</option>
+
+	</select></div>
+	</li>
+
+
+	<li id="foli16" class="leftHaft"><label class="desc" id="title16"
+		for="Field16"> Thời gian thuê </label>
+	<div class="col"><select id="Field7" name="Field7"
+		class="field select medium" tabindex="5">
+		<option value="0">[Chọn thời gian thuê]</option>
+		<option value="1d">Một ngày</option>
+		<option value="1w">Một tuần</option>
+		<option value="1m">Một tháng</option>
+
+	</select></div>
+	</li>
+
+	<li id="foli0" class="date leftHalf     "><label class="desc"
+		id="title0" for="Field0"> Ngày thuê </label> <span> <input
+		id="Field0-1" name="Field0-1" type="text" class="field text" value=""
+		size="2" maxlength="2" tabindex="5" /> <label for="Field0-1">MM</label>
+	</span> <span class="symbol">/</span> <span> <input id="Field0-2"
+		name="Field0-2" type="text" class="field text" value="" size="2"
+		maxlength="2" tabindex="6" /> <label for="Field0-2">DD</label>
+	</span> <span class="symbol">/</span> <span> <input id="Field0"
+		name="Field0" type="text" class="field text" value="" size="4"
+		maxlength="4" tabindex="7" /> <label for="Field0">YYYY</label>
+	</span> <span id="cal0"> </span> <script type="text/javascript">
+	Calendar.setup({
+	inputField	 : "Field0",
+	displayArea  : "cal0",
+	button		 : "pick0",
+	ifFormat	 : "%B %e, %Y",
+	onSelect	 : selectDateOnForm
+	});
+	</script></li>
+
+
+	<li id="foli3" class="date rightHalf"><label class="desc"
+		id="title3" for="Field3"> Ngày trả </label> <span> <input
+		id="Field3-1" name="Field3-1" type="text" class="field text" value=""
+		size="2" maxlength="2" tabindex="12" /> <label for="Field3-1">MM</label>
+	</span> <span class="symbol">/</span> <span> <input id="Field3-2"
+		name="Field3-2" type="text" class="field text" value="" size="2"
+		maxlength="2" tabindex="13" /> <label for="Field3-2">DD</label>
+	</span> <span class="symbol">/</span> <span> <input id="Field3"
+		name="Field3" type="text" class="field text" value="" size="4"
+		maxlength="4" tabindex="14" /> <label for="Field3">YYYY</label>
+	</span> <span id="cal3"> </span> <script type="text/javascript">
+	Calendar.setup({
+	inputField	 : "Field3",
+	displayArea  : "cal3",
+	button		 : "pick3",
+	ifFormat	 : "%B %e, %Y",
+	onSelect	 : selectDateOnForm
+	});
+	</script></li>
+
+
+	<li id="foli18" class="leftHalf"><label class="desc" id="title18"
+		for="Field18"> Dịch vụ đi kèm </label>
+	<div class="col"><span> <input id="Field181"
+		name="Field181" type="checkbox" class="field checkbox" value="AnSang"
+		tabindex="26" /> <label class="choice">Ăn sáng</label> </span> <span>
+	<input id="Field182" name="Field182" type="checkbox"
+		class="field checkbox" value="AnTrua" tabindex="26" /> <label
+		class="choice">Giặt ủi</label> </span> <span> <input id="Field183"
+		name="Field183" type="checkbox" class="field checkbox" value="AnToi"
+		tabindex="27" /> <label class="choice">Báo buổi sáng</label> </span></div>
+	</li>
+
+
+	<li id="foli2" class="     "><label class="desc" id="title2"
+		for="Field2"> Đơn giá một ngày * </label> VNĐ <span> <input
+		id="Field2" name="Field2" type="text" class="field text currency"
+		value="" size="30" tabindex="28" /> </span></li>
+
+
+
+
+	<li class="buttons "><input id="calculateCost" name="calcCost"
+		class="btTxt submit" type="button" value="Tính đơn giá" /> <input
+		id="saveForm" name="saveForm" class="btTxt submit" type="submit"
+		value="Đăng ký" /></li>
+
+	<li style="display: none"><label for="comment">Do Not Fill
+	This Out</label> <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+	<input type="hidden" id="idstamp" name="idstamp" value="" /></li>
+</ul>
+</form>
+
+</div>
+<!--container-->
+<img id="bottom" src="images/bottom.png" alt="" />
+
+</body>
+</html>

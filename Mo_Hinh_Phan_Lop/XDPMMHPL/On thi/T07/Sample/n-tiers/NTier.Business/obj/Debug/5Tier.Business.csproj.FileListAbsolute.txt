@@ -1,0 +1,33 @@
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.Business.pdb
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.Common.dll
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.DAL.dll
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.Common.pdb
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\bin\Debug\NTier.DAL.pdb
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\obj\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 07\SOA\NTier.Business\obj\Debug\NTier.Business.pdb
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Business.pdb
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.DAL.dll
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.Common.pdb
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\bin\Debug\NTier.DAL.pdb
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 04\5-Tier\5-Tier\NTier.Business\obj\Debug\NTier.Business.pdb
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\bin\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\bin\Debug\NTier.Business.pdb
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\bin\Debug\NTier.DAL.dll
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\bin\Debug\NTier.Common.pdb
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\bin\Debug\NTier.DAL.pdb
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\obj\Debug\NTier.Business.dll
+E:\My Book\Code\Chapter 04\5-Tier\NTier.Business\obj\Debug\NTier.Business.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\bin\Debug\NTier.Business.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\bin\Debug\NTier.Business.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\bin\Debug\NTier.DAL.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\bin\Debug\NTier.Common.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\bin\Debug\NTier.DAL.pdb
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\obj\Debug\ResolveAssemblyReference.cache
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\obj\Debug\NTier.Business.dll
+E:\SGU\GiangDay\XDPM_MHPL\DCT108\T05\Sample\n-tiers\NTier.Business\obj\Debug\NTier.Business.pdb

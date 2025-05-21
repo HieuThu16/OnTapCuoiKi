@@ -1,0 +1,414 @@
+Câu1:
+1: Kiến trúc Client-Server là:
+
+a. 1 tier
+b. 2 tier ✓
+c. 3 tier
+d. N tier
+
+Đáp án chọn: b (2 tier)
+
+Kiến trúc Client-Server cơ bản gồm 2 tầng: phía client (giao diện người dùng) và phía server (xử lý dữ liệu).
+
+2: Trong mô hình MVC, lớp View có chức năng nào?
+
+a. Truy vấn CSDL
+b. Hiển thị CSDL
+c. Gọi model
+d. Nhận sự kiện
+
+Đáp án chọn: này hỏi nhiều chat rồi mà nó trả lời làm phân vân =))
+
+3: Một Windows-based project theo kiến trúc n-tier thì thường có:
+
+a. Windows form, Business Layer, Data Access Layer ✓
+b. Windows form, Controller, Model
+c. Windows form, Business Layer, Data Layer
+d. Windows form, Data Access Layer
+
+Đáp án chọn: a (Windows form, Business Layer, Data Access Layer)
+
+Đây là cấu trúc phổ biến của ứng dụng Windows n-tier.
+
+4: Xác định tầng quan hệ giữa lớp sản phẩm và hóa đơn?
+
+a. Dependency
+b. Aggregation ✓
+c. Composition
+d. Không có
+
+Đáp án chọn: b (Aggregation)
+
+ Một hóa đơn (Order/Invoice) thường chứa nhiều sản phẩm (Product), và một sản phẩm có thể tồn tại độc lập mà không cần có trong hóa đơn nào. Điều này thể hiện mối quan hệ "has-a" lỏng lẻo, phù hợp với Aggregation (tập hợp).
+
+5: Điều gì thực hiện trong giai đoạn thiết kế?
+
+a. Thực hiện viết mã (code)
+b. Thực hiện các thay đổi khi phần mềm đã được tạo
+c. Lập kế hoạch giải pháp, giao diện phần mềm ✓
+d. Đảm bảo các yêu cầu được hiểu rõ
+
+Đáp án chọn: c (Lập kế hoạch giải pháp, giao diện phần mềm)
+
+Giai đoạn thiết kế tập trung vào lập kế hoạch giải pháp và thiết kế giao diện.
+
+6: Chọn thứ tự sắp xếp của Project Life Cycle (PLC) đúng?
+
+a. 1-2-3-4 ✓
+b. 2-1-3-4
+c. 3-2-1-4
+d. Tất cả đều đúng
+
+Đáp án chọn: a (1-2-3-4)
+
+Thứ tự đúng: 1. Project Initiation; 2. Planning and Prototyping; 3. Project Construction; 4. Project Transition and Release
+
+7: Trong giai đoạn Project Construction, với các yêu cầu để hiển thị và đê cập nhật, thì mô hình nào là phù hợp nhất?
+
+a. Prototyping Model
+b. Spiral Model
+c. V-Model
+d. Waterfall Model ✓
+
+Đáp án chọn: d (Waterfall Model)
+
+Waterfall Model: Phù hợp với các dự án có yêu cầu rõ ràng, ít thay đổi, vì nó đi theo trình tự tuyến tính.
+Prototyping Model: Dùng khi yêu cầu chưa rõ, cần xây dựng prototype để lấy phản hồi.
+Spiral Model: Kết hợp lặp đi lặp lại với quản lý rủi ro, phù hợp dự án lớn, phức tạp, rủi ro cao.
+V-Model: Mở rộng của Waterfall, chú trọng kiểm thử ở mỗi giai đoạn.
+Khi yêu cầu "dễ hiểu và dễ xác định" thì Waterfall là lựa chọn tốt vì sự đơn giản và trình tự rõ ràng của nó. Đáp án: d. Waterfall Model
+
+8: Chọn phát biểu sai của quy trình SCRUM?
+
+a. Mỗi lần lặp có quy định thời gian
+b. Mỗi lần lặp đều phải đủ các bước: planning, requirements, design, coding, testing, and documentation
+c. Chỉ cho tester kiểm tra mà không cho khách hàng sử dụng thử ✓
+d. Mục tiêu tạo sản phẩm cuối mỗi lần lặp không có lỗi
+
+Đáp án chọn: c (Chỉ cho tester kiểm tra mà không cho khách hàng sử dụng thử)
+
+Trong SCRUM, khách hàng được khuyến khích tham gia vào quá trình kiểm thử.(câu này hơi cần có con kêu câu b và c sai và b sai nhiều hơn)
+
+9: Cho biết quan hệ giữa lớp Sản phẩm và Danh mục có Multiplicity là:
+
+a. One-to-zero-One
+b. One-to-Many ✓
+c. One-to-One
+d. Many-to-Many
+
+Đáp án chọn: b (One-to-Many)
+
+Nếu không có thông tin gì thêm cho thấy rằng một sản phẩm có thể thuộc nhiều danh mục, thì One-to-Many là mặc định hợp lý và phổ biến trong thực tế.
+
+10: Business Layer không có chức năng nào sau đây?
+
+a. Chuyển đổi dữ liệu của DAL
+b. Lưu cập nhật dữ liệu
+c. Hiển thị CSDL ✓
+d. Kiểm soát lỗi dữ liệu nhập
+
+Đáp án chọn: c (Hiển thị CSDL)
+
+Xử lý các quy tắc nghiệp vụ (business rules) .
+Kiểm tra và xác thực dữ liệu đầu vào (kiểm soát lỗi dữ liệu nhập).
+Tương tác với DAL để lấy hoặc cập nhật dữ liệu, nhưng không trực tiếp lưu dữ liệu , mà chỉ yêu cầu DAL làm điều đó.
+Có thể chuyển đổi dữ liệu từ DAL thành dạng phù hợp để UI sử dụng.
+Business Layer không có chức năng hiển thị CSDL, đó là nhiệm vụ của View/Presentation Layer.
+
+11: Trong sơ đồ ERD, chọn phát biểu sai:
+
+a. Thực thể và và thuộc tính được biểu diễn bằng hình chữ nhật, hình tròn
+b. Quan hệ giữa 2 thực thể được biểu diễn bằng hình thoi
+c. Số degree giữa các thực thể thường là 2
+d. Có biểu diễn các phương thức của thực thể ✓
+
+Đáp án chọn: d (Có biểu diễn các phương thức của thực thể)
+
+ERD chỉ biểu diễn : thực thể, thuộc tính, quan hệ, khóa chính,...
+Không biểu diễn phương thức , vì đó là đặc trưng của lớp trong lập trình hướng đối tượng , không phải trong mô hình cơ sở dữ liệu quan hệ.
+
+12: Chọn cardinality giữa 2 thực thể Khách hàng và Sản phẩm:
+
+a. 1:1
+b. 1:n
+c. n:m ✓
+d. Không có
+
+Đáp án chọn: c (n:m)
+
+Một Khách hàng có thể mua nhiều Sản phẩm (n).
+Một Sản phẩm có thể được nhiều Khách hàng mua (m).
+
+13: Loại liên kết tồn tại trong sơ đồ lớp trên:
+
+a. Aggregation
+b. Composition ✓
+c. Inheritance
+d. Realization
+
+Đáp án chọn: b (Composition)
+
+Sơ đồ lớp cho thấy hai lớp (Entity 1 và Entity 2) và một mũi tên có hình kim cương đặc (filled diamond) ở phía Entity 1, chỉ vào Entity 2. Đây là ký hiệu của mối quan hệ Composition (quan hệ hợp thành) trong UML Class Diagram.
+
+Composition là một dạng đặc biệt của Aggregation, nơi một đối tượng là một phần của đối tượng khác và không thể tồn tại độc lập. Nếu đối tượng "toàn thể" bị hủy, các đối tượng "bộ phận" cũng bị hủy theo. Hình kim cương đặc biểu thị Composition.
+Aggregation (quan hệ tập hợp) cũng là một dạng "has-a" nhưng lỏng lẻo hơn, các đối tượng bộ phận có thể tồn tại độc lập. Ký hiệu là hình kim cương rỗng.
+Inheritance (kế thừa) là quan hệ "is-a", được biểu diễn bằng mũi tên rỗng chỉ vào lớp cha.
+Realization (hiện thực hóa) là quan hệ giữa một interface và một class hiện thực hóa interface đó, biểu diễn bằng đường nét đứt với mũi tên rỗng.
+
+14: ___ có thể truy cập vào mô hình dữ liệu và chuyển dữ liệu đến chế độ xem:
+
+a. Model
+b. View
+c. Controller ✓
+d. DTO
+
+Đáp án chọn: c (Controller)
+
+Controller trong MVC là thành phần kết nối Model và View.
+
+15: Route mặc định, đầy đủ trong MVC?
+
+a. "/{action}/{controller}/{id}"
+b. "/{controller}/{id}"
+c. "/{controller}/{action}/{id}" ✓
+d. {controller}/{action}
+
+Đáp án chọn: c ("/{controller}/{action}/{id}")
+
+controller: tên của controller (ví dụ: ProductController)
+action: tên phương thức trong controller (ví dụ: Details)
+id: tham số tùy chọn (ví dụ: 123)
+
+16: Điều gì được thực hiện trong giai đoạn thử nghiệm?
+
+a. Thực hiện các thay đổi khi phần mềm đã được tạo
+b. Lập kế hoạch giải pháp, giao diện phần mềm
+c. Mã nay được kiểm tra dựa trên thông số kỹ thuật ✓
+d. Đảm bảo các yêu cầu được hiểu rõ
+
+Đáp án chọn: c (Mã nay được kiểm tra dựa trên thông số kỹ thuật)
+
+Giai đoạn thử nghiệm (testing) là quá trình kiểm tra mã nguồn, phần mềm dựa trên các yêu cầu và thông số kỹ thuật đã được xác định để phát hiện lỗi, đảm bảo phần mềm hoạt động đúng.
+
+17: Chọn multiplicity giữa 2 lớp Khách hàng và Hóa đơn:
+
+a. * và 0..* ✓
+b. 1 và 1..*
+c. 1 và *
+d. Không có
+
+Đáp án chọn: c (1 và *)
+
+Khách hàng có thể có nhiều hóa đơn ⇒ multiplicity là * hoặc 0..*
+Hóa đơn luôn thuộc về một khách hàng ⇒ multiplicity là 1
+
+18: Cho biết hàm này thuộc lớp nào?
+
+a. DAL
+b. BL ✓
+c. UI
+d. Data
+
+Đáp án chọn: b (BL)
+
+a. DAL (Data Access Layer)
+Đặc điểm: Lớp DAL chịu trách nhiệm truy cập và thao tác trực tiếp với cơ sở dữ liệu.
+Phân tích: Trong hàm Add(), ta thấy rằng lớp CustomerDAL đang thực hiện việc lưu trữ dữ liệu. Tuy nhiên, hàm Add() không nằm trong lớp CustomerDAL mà chỉ gọi đến nó. Do đó, hàm này không phải là phần của DAL .
+b. BL (Business Logic Layer)
+Đặc điểm: Lớp BL chứa các quy tắc nghiệp vụ và logic kinh doanh. Nó thường đóng vai trò kết nối giữa UI và DAL, xử lý dữ liệu trước khi gửi xuống DAL hoặc trả về cho UI.
+Phân tích: Hàm Add() ở đây có vẻ như là một phần của lớp nghiệp vụ. Nó nhận thông tin từ lớp UI (nếu có), sau đó gọi đến lớp DAL để lưu trữ dữ liệu. Đây là đặc trưng của lớp Business Logic Layer.
+c. UI (User Interface Layer)
+Đặc điểm: Lớp UI chịu trách nhiệm hiển thị giao diện người dùng và xử lý sự kiện từ người dùng.
+Phân tích: Hàm Add() không liên quan đến giao diện người dùng hay xử lý sự kiện. Nó chỉ thực hiện việc gọi đến lớp DAL để lưu trữ dữ liệu, nên không phải là phần của UI .
+d. Data
+Đặc điểm: Nếu "Data" đề cập đến lớp mô hình dữ liệu (data model), thì lớp này chỉ chứa các thuộc tính và không thực hiện bất kỳ hành động nào.
+Phân tích: Hàm Add() thực hiện hành động gọi đến lớp DAL, điều này vượt quá phạm vi của lớp data model. Do đó, đáp án này không đúng .
+Kết luận:
+Hàm Add() nằm trong Business Logic Layer (BL) , vì:
+
+Nó không trực tiếp tương tác với cơ sở dữ liệu (như DAL).
+Nó không liên quan đến giao diện người dùng (như UI).
+Nó thực hiện một hành động nghiệp vụ (gọi đến DAL để lưu trữ dữ liệu).
+
+19: Lớp nào trong mô hình MVC có chức năng giống với BL trong mô hình Three Layer:
+
+a. Model
+b. Controller ✓
+c. View
+d. Route
+
+Đáp án chọn: b (Controller)
+
+a. Model : Chứa dữ liệu và cấu trúc, không xử lý logic nghiệp vụ trực tiếp.
+c. View : Chỉ hiển thị dữ liệu, không xử lý logic.
+d. Route : Chỉ định tuyến URL đến Controller phù hợp – không phải là lớp xử lý logic.
+
+20: Trong mô hình MVC, lớp View lấy dữ liệu từ lớp nào?
+
+a. Model ✓
+b. Controller
+c. Route
+d. DTO
+
+Đáp án chọn: b (Controller)
+
+Vì View nhận dữ liệu từ Controller sau khi Controller đã xử lý và chuẩn bị dữ liệu từ Model.
+
+Câu 2:
+a. Giải thích các lý do tại sao phải viết phần mềm theo mô hình phân lớp?
+Việc xây dựng phần mềm theo mô hình phân lớp là một nguyên tắc quan trọng trong lập trình hiện đại, mang lại nhiều lợi ích như sau:
+
+Tính tổ chức và dễ bảo trì:
+Mỗi lớp đảm nhận một nhiệm vụ cụ thể, giúp hệ thống rõ ràng, dễ hiểu và dễ quản lý hơn.
+Khi cần sửa lỗi hoặc nâng cấp, chỉ cần thay đổi ở lớp liên quan mà không ảnh hưởng đến toàn bộ hệ thống.
+Tính tái sử dụng (Reusability):
+Các lớp có thể được sử dụng lại ở nhiều nơi khác nhau hoặc trong các dự án khác nhờ vào việc tách biệt chức năng.
+Tính mở rộng (Scalability):
+Hệ thống dễ dàng mở rộng khi nhu cầu phát triển tăng lên, vì mỗi lớp độc lập nên có thể phát triển riêng biệt.
+Dễ kiểm thử (Testability):
+Việc kiểm thử từng lớp riêng biệt giúp xác định lỗi chính xác hơn và giảm thời gian kiểm thử hệ thống.
+Phân công công việc hiệu quả trong nhóm:
+Các thành viên trong nhóm có thể làm việc song song trên các lớp khác nhau mà không xung đột.
+Tăng tính bảo mật và kiểm soát dữ liệu:
+Lớp logic nghiệp vụ giúp kiểm soát chặt chẽ việc truy cập và xử lý dữ liệu, tránh truy xuất trực tiếp từ giao diện người dùng.
+b. Khi thực hiện dự án có lượng người dùng lớn và phân tán, em chọn loại ứng dụng là Windows Application hay Web Application và giải thích lý do. Khi viết code, em chọn mô hình triển khai là Three layer hay MVC và giải thích lý do.
+Lựa chọn loại ứng dụng: Web Application
+Lý do:
+Tính truy cập mọi lúc mọi nơi: Người dùng có thể truy cập từ bất kỳ thiết bị nào có trình duyệt và kết nối internet.
+Không cần cài đặt: Không cần cài đặt ứng dụng trên từng máy người dùng, thuận tiện cho số lượng người dùng lớn và phân tán.
+Cập nhật dễ dàng: Chỉ cần cập nhật ở phía server là toàn bộ người dùng đều được dùng phiên bản mới.
+Khả năng mở rộng cao: Dễ dàng mở rộng cơ sở hạ tầng để phục vụ nhiều người dùng đồng thời.
+Tương thích đa nền tảng: Hoạt động tốt trên cả máy tính, điện thoại, tablet,...
+Ngược lại, Windows Application thường phù hợp với những ứng dụng dành riêng cho môi trường nội bộ, có ít người dùng, và yêu cầu hiệu năng cao.
+
+Lựa chọn mô hình triển khai: MVC
+Lý do chọn MVC (Model - View - Controller):
+Tách biệt giữa giao diện, logic và dữ liệu: Giúp dễ bảo trì, dễ mở rộng và hỗ trợ làm việc nhóm hiệu quả.
+Thân thiện với Web: MVC là mô hình phổ biến và tối ưu nhất cho các ứng dụng Web (như ASP.NET MVC, Spring MVC, Laravel...).
+Hỗ trợ phát triển nhanh và linh hoạt: Có thể phát triển song song giữa Frontend (View), Backend (Controller + Model).
+SEO-friendly: So với một số framework SPA khác, ứng dụng MVC truyền thống thường thân thiện với công cụ tìm kiếm hơn.
+Tối ưu cho RESTful API: Dễ dàng tích hợp API phục vụ đa nền tảng nếu cần.
+Trong khi đó, Three Layer Architecture cũng rất tốt, nhưng nó thường được áp dụng cùng với MVC để tăng thêm mức độ phân tầng trong logic nghiệp vụ và truy xuất dữ liệu.
+
+Câu 3:
+
+a. Xem danh sách tên khóa học của đơn vị là Tin theo mô hình Three Layer:
+
+// DAL/Model
+method {
+//don't write codes to access database
+public List<KhoaHoc> getDanhSachKhoaHoc(String donVi) {
+    // Code truy xuất CSDL ở đây
+    // Giả sử có hàm select * from KhoaHoc where donvi = donVi
+}
+}
+
+// BL/Controller
+method {
+//code here
+public List<String> getTenKhoaHocByDonVi(String donVi) {
+    List<KhoaHoc> dsKhoaHoc = dal.getDanhSachKhoaHoc(donVi);
+    List<String> dsTenKhoaHoc = new ArrayList<>();
+
+    for(KhoaHoc kh : dsKhoaHoc) {
+        dsTenKhoaHoc.add(kh.getTen());
+    }
+
+    return dsTenKhoaHoc;
+}
+}
+
+// UI/View
+method () {
+//code here
+public void xemDanhSachKhoaHocTin() {
+    List<String> dsTenKhoaHoc = bl.getTenKhoaHocByDonVi("Tin");
+
+    System.out.println("Danh sách tên khóa học của đơn vị Tin:");
+    for(String ten : dsTenKhoaHoc) {
+        System.out.println("- " + ten);
+    }
+}
+}
+
+b. Tìm kiếm khóa học có học phí >= 1000 theo mô hình Three Layer:
+
+// DAL/Model
+method {
+//don't write codes to access database
+public List<KhoaHoc> getAllKhoaHoc() {
+    // Code truy xuất tất cả khóa học từ CSDL
+}
+}
+
+// BL/Controller
+method {
+//code here
+public List<KhoaHoc> getKhoaHocByHocPhi(double hocPhiMin) {
+    List<KhoaHoc> dsKhoaHoc = dal.getAllKhoaHoc();
+    List<KhoaHoc> ketQua = new ArrayList<>();
+
+    for(KhoaHoc kh : dsKhoaHoc) {
+        if(kh.getHocPhi() >= hocPhiMin) {
+            ketQua.add(kh);
+        }
+    }
+
+    return ketQua;
+}
+}
+
+// UI/View
+method () {
+//code here
+public void timKhoaHocTheoHocPhi() {
+    List<KhoaHoc> dsKhoaHoc = bl.getKhoaHocByHocPhi(1000);
+
+    System.out.println("Danh sách khóa học có học phí >= 1000:");
+    for(KhoaHoc kh : dsKhoaHoc) {
+        System.out.println("ID: " + kh.getId() +
+                          ", Tên: " + kh.getTen() +
+                          ", Đơn vị: " + kh.getDonVi() +
+                          ", Học phí: " + kh.getHocPhi());
+    }
+}
+}
+
+c. Xem danh sách tên khóa học mở trong năm 2022 theo mô hình MVC:
+
+// Model
+method {
+//don't write codes to access database
+public List<KhoaHoc> getKhoaHocByYear(int year) {
+    // Code để lấy khóa học từ CSDL theo năm
+    // SELECT * FROM KHOAHOC WHERE YEAR(NGAYBATDAU) = year
+}
+}
+
+// Controller
+method {
+//code here
+public List<KhoaHoc> getKhoaHocTrongNam(int year) {
+    return model.getKhoaHocByYear(year);
+}
+
+public void showKhoaHocTrongNam(int year) {
+    List<KhoaHoc> dsKhoaHoc = getKhoaHocTrongNam(year);
+    view.displayKhoaHocList(dsKhoaHoc);
+}
+}
+
+// View
+method () {
+//code here
+public void displayKhoaHocList(List<KhoaHoc> dsKhoaHoc) {
+    System.out.println("Danh sách khóa học mở trong năm 2022:");
+    for(KhoaHoc kh : dsKhoaHoc) {
+        System.out.println("- " + kh.getTen() + " (Bắt đầu: " + kh.getNgayBatDau() + ")");
+    }
+}
+
+public void requestKhoaHoc2022() {
+    controller.showKhoaHocTrongNam(2022);
+}
+}

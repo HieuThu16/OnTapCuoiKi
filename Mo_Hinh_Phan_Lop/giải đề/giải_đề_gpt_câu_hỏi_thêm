@@ -1,0 +1,533 @@
+Câu 1: Tập tin cấu hình trong Hibernate?
+Đáp án đúng: A. hibernate.cfg.xml
+🔍 Giải thích các lựa chọn:
+A. hibernate.cfg.xml ✅ → File cấu hình chính của Hibernate, dùng để thiết lập kết nối DB, dialect, user/pass, ánh xạ entity.
+B. web.xml → File cấu hình trong ứng dụng web (Servlet/JSP), không liên quan trực tiếp đến Hibernate.
+C. persistence.xml → File cấu hình dùng trong JPA chuẩn (Java EE), không phải file gốc của Hibernate nhưng có thể dùng được nếu dùng JPA.
+D. application.properties → Thuộc Spring Boot, dùng để cấu hình toàn bộ ứng dụng, trong đó có thể có phần Hibernate nếu tích hợp.
+
+Hibernate là gì? → ORM Framework giúp ánh xạ giữa Java và CSDL.
+ORM là viết tắt của gì?
+→ Object Relational Mapping.
+Cách cấu hình kết nối DB trong Hibernate?
+→ Qua hibernate.cfg.xml hoặc Java Config.
+Hibernate hỗ trợ các loại quan hệ nào?
+→ OneToOne, OneToMany, ManyToOne, ManyToMany.
+Cách để ánh xạ class Java với bảng?
+→ Dùng annotation hoặc XML mapping.
+
+Câu 2: Kiến trúc Client-Server là:
+Đáp án đúng: B. 2 tier
+🔍 Giải thích các lựa chọn:
+A. 1 tier
+→ Mọi thứ chạy trong cùng một tầng (ví dụ: phần mềm desktop đơn giản).
+B. 2 tier ✅
+→ Gồm Client và Server. Client gửi request, Server xử lý và trả dữ liệu.
+C. 3 tier
+→ Gồm UI, Business Logic, và Data Layer.
+D. N-tier
+→ Mở rộng từ 3-tier, chia nhỏ thành nhiều tầng hơn.
+📘 5 câu hỏi lý thuyết liên quan:
+Mô hình 3-tier gồm những tầng nào?
+→ Presentation, Business Logic, Data Access.
+2-tier thích hợp với hệ thống nào?
+→ Ứng dụng nhỏ, đơn giản.
+Ưu điểm của mô hình Client-Server?
+→ Phân tách rõ ràng vai trò, dễ bảo trì.
+Tầng nào xử lý logic trong mô hình 3-tier?
+→ Business Logic Layer.
+Sự khác biệt giữa 2-tier và 3-tier?
+→ 3-tier có lớp trung gian xử lý nghiệp vụ
+
+Câu 3: Ký hiệu đặc tả khóa chính trong lớp thực thể?
+Đáp án đúng: B. @Id
+🔍 Giải thích các lựa chọn:
+A. @PrimaryKey
+→ Không tồn tại trong JPA, sai cú pháp.
+B. @Id ✅
+→ Annotation dùng để đánh dấu khóa chính của entity.
+C. @GeneratedValue
+→ Dùng để đánh dấu giá trị tự tăng (auto increment), đi kèm với @Id.
+D. @Key → Không tồn tại trong JPA.
+📘 5 câu hỏi lý thuyết liên quan:
+Annotation nào dùng để tạo khóa chính?
+→ @Id
+Muốn khóa chính tự tăng dùng gì?
+→ @GeneratedValue
+Dùng annotation nào để ánh xạ với tên cột DB?
+→ @Column
+Một entity có bao nhiêu @Id?
+→ Một (trừ khi dùng composite key).
+Composite key dùng annotation nào?
+→ @EmbeddedId hoặc @IdClass
+
+Câu 4: Trong mô hình MVC, lớp View có chức năng nào?     Đáp án đúng: B. Hiển thị CSDL
+A. Truy vấn CSDL → Là nhiệm vụ của Model hoặc DAO.
+B. Hiển thị CSDL ✅ → View dùng để hiển thị thông tin lên giao diện người dùng.
+C. Gọi model → Thường do Controller thực hiện.
+D. Nhận sự kiện  → Controller thường xử lý sự kiện và tương tác.
+
+View trong MVC là gì?→ Phần hiển thị dữ liệu cho người dùng.
+
+Controller có vai trò gì?
+→ Nhận yêu cầu, điều hướng dữ liệu, xử lý logic.
+
+Model trong MVC làm gì?
+→ Quản lý dữ liệu và logic nghiệp vụ.
+
+MVC giúp ích gì cho phát triển phần mềm?
+→ Tách biệt logic, dễ bảo trì, test.
+
+JSP thường đóng vai trò gì trong MVC?
+→ View.
+
+Câu 5: Dự án Windows theo kiến trúc n-tier thường có:
+Đáp án đúng: A. Windows form, Business Layer, Data Access Layer
+
+🔍 Giải thích các lựa chọn:
+
+A. Windows form, Business Layer, Data Access Layer ✅
+→ Windows Form là UI, BL xử lý logic, DAL truy vấn DB.
+
+B. Windows form, Controller, Model
+→ Thuộc về mô hình MVC, không phải n-tier.
+
+C. Windows form, Business Layer, Data Layer
+→ Gần đúng nhưng "Data Layer" không rõ là DAL hay DB.
+
+D. Windows form, Data Access Layer
+→ Thiếu lớp xử lý nghiệp vụ (Business Layer).
+
+📘 5 câu hỏi lý thuyết liên quan:
+
+Tại sao phải chia lớp trong phần mềm?
+→ Giảm phụ thuộc, dễ bảo trì, test.
+
+Business Layer xử lý gì?
+→ Logic nghiệp vụ.
+
+DAL dùng để làm gì?
+→ Truy vấn/ghi dữ liệu DB.
+
+Windows Form là gì?
+→ UI trong ứng dụng desktop.
+
+Có thể gộp DAL và BL không?
+→ Có, nhưng không khuyến khích.
+
+Dưới đây là phần **tiếp theo từ câu 6 đến câu 10**, mỗi câu gồm:
+
+* **Đáp án chính xác ✅**
+* **Giải thích từng lựa chọn A/B/C/D**
+* **10 câu hỏi lý thuyết liên quan (mức nhận biết - thông hiểu)** kèm đáp án.
+
+---
+
+### **Câu 6: Mục tiêu của HQL (Hibernate Query Language)?**
+
+**Đáp án đúng: C. Hiển thị CSDL**
+
+🔍 **Giải thích các lựa chọn:**
+
+* **A. Định nghĩa schemas của CSDL**
+  → Không phải chức năng của HQL, việc này do DDL đảm nhiệm.
+* **B. Tạo đối tượng Java từ bảng CSDL**
+  → Là chức năng của ORM (Hibernate), không phải HQL.
+* **C. Hiển thị CSDL** ✅
+  → HQL được dùng để truy vấn dữ liệu, tương tự như SQL nhưng hướng đối tượng.
+* **D. Thực hiện một tác vụ CRUD**
+  → Không chính xác hoàn toàn, vì HQL không hỗ trợ đầy đủ CRUD như REST hay Repository.
+
+📘 **10 câu hỏi lý thuyết liên quan:**
+
+1. HQL là gì?
+   → Hibernate Query Language – ngôn ngữ truy vấn hướng đối tượng.
+2. HQL khác gì với SQL?
+   → HQL dùng tên class, field thay vì bảng và cột.
+3. Câu lệnh HQL để lấy tất cả user?
+   → `from User`
+4. Câu lệnh HQL có thể update không?
+   → Có, dùng `update`, `delete`, `insert`.
+5. Có thể dùng `join` trong HQL không?
+   → Có, dùng `inner join`, `left join`.
+6. HQL có hỗ trợ `WHERE` không?
+   → Có, giống như SQL.
+7. HQL có hỗ trợ truy vấn nested object?
+   → Có.
+8. HQL có hỗ trợ phân trang không?
+   → Có, dùng `setFirstResult`, `setMaxResults`.
+9. HQL có thể kết hợp với `@Query` trong Spring không?
+   → Có.
+10. HQL có thể dùng `LIKE` không?
+    → Có, như trong SQL.
+
+---
+
+### **Câu 7: Điều gì thực hiện trong giai đoạn thiết kế?**
+
+**Đáp án đúng: C. Lập kế hoạch giải pháp, giao diện phần mềm**
+
+🔍 **Giải thích các lựa chọn:**
+
+* **A. Thực hiện viết mã (code)**
+  → Giai đoạn phát triển/implementation, **sau thiết kế**.
+* **B. Thực hiện các công cụ khi phần mềm đã được tạo**
+  → Không liên quan đến thiết kế, có thể thuộc deployment.
+* **C. Lập kế hoạch giải pháp, giao diện phần mềm** ✅
+  → Đúng với bản chất giai đoạn thiết kế: UML, wireframe, prototype...
+* **D. Đảm bảo các yêu cầu được hiểu rõ**
+  → Giai đoạn phân tích yêu cầu.
+
+📘 **10 câu hỏi lý thuyết liên quan:**
+
+1. Thiết kế hệ thống là gì?
+   → Là giai đoạn tạo kiến trúc tổng thể và chi tiết của phần mềm.
+2. Công cụ hỗ trợ thiết kế?
+   → UML, Draw\.io, Figma.
+3. Lợi ích của thiết kế trước khi lập trình?
+   → Giảm lỗi, thống nhất quy trình.
+4. Giao diện nên được thiết kế ở đâu?
+   → Giai đoạn thiết kế hệ thống.
+5. Class Diagram dùng để làm gì?
+   → Mô tả cấu trúc đối tượng.
+6. Sequence Diagram dùng làm gì?
+   → Mô tả luồng tương tác giữa các đối tượng.
+7. ERD có vai trò gì?
+   → Thiết kế cơ sở dữ liệu.
+8. Thiết kế chi tiết gồm gì?
+   → Module, hàm, lớp, cấu trúc dữ liệu cụ thể.
+9. Thiết kế giao diện người dùng là gì?
+   → Wireframe/UI Design.
+10. Prototype là gì?
+    → Mô hình mẫu phần mềm.
+
+---
+
+### **Câu 8: Thứ tự đúng của Project Life Cycle (PLC)?**
+
+**Đáp án đúng: A. 2-3-4**
+
+🔍 **Giải thích các lựa chọn:**
+
+* **1. Project Initiation (Khởi đầu dự án)**
+
+* **2. Planning and Prototyping (Lập kế hoạch và thiết kế sơ bộ)**
+
+* **3. Project Construction (Phát triển phần mềm)**
+
+* **4. Project Transition and Release (Triển khai và bàn giao)**
+
+* **A. 2-3-4** ✅
+  → Bắt đầu từ kế hoạch, đến phát triển, cuối cùng là triển khai.
+
+* **B. 1-2-3-4**
+  → Chính xác hơn vì bao gồm giai đoạn khởi đầu (nên chọn **B** là tốt nhất nếu có 1).
+
+* **C. 3-2-1-4**
+  → Sai thứ tự logic.
+
+* **D. Tất cả đúng**
+  → Sai vì C sai.
+
+📘 **10 câu hỏi lý thuyết liên quan:**
+
+1. Giai đoạn đầu tiên của PLC là gì?
+   → Khởi tạo dự án (Initiation).
+2. Khi nào nên lập kế hoạch chi tiết?
+   → Trước khi code, giai đoạn Planning.
+3. Release được thực hiện khi nào?
+   → Sau khi hoàn thành và test phần mềm.
+4. Giai đoạn nào test được thực hiện?
+   → Sau construction, trước Release.
+5. Prototyping để làm gì?
+   → Xây dựng mô hình mẫu nhanh.
+6. Agile có mấy giai đoạn chính?
+   → 5: Envision, Speculate, Explore, Adapt, Close.
+7. Gantt chart dùng để?
+   → Lập kế hoạch và theo dõi tiến độ dự án.
+8. Khó khăn của giai đoạn transition là gì?
+   → Đảm bảo phần mềm ổn định và dễ bảo trì.
+9. Testing thuộc PLC nào?
+   → Project Construction hoặc kế tiếp.
+10. PLC dùng trong mô hình phát triển nào?
+    → Waterfall, Agile, Spiral,…
+
+---
+
+### **Câu 9: Cái nào sau đây không phải là một thành phần của Spring Framework?**
+
+**Đáp án đúng: D. HTML/JSP**
+
+🔍 **Giải thích các lựa chọn:**
+
+* **A. AOP (Aspect-Oriented Programming)**
+  → Thành phần chính của Spring, hỗ trợ lập trình hướng khía cạnh.
+* **B. O/R Integration (ORM)**
+  → Spring hỗ trợ ORM như Hibernate, JPA.
+* **C. Spring MVC**
+  → Là một module trong Spring dùng để xây dựng web.
+* **D. HTML/JSP** ✅
+  → Không phải thành phần của Spring. Đây là công nghệ giao diện, không thuộc framework.
+
+📘 **10 câu hỏi lý thuyết liên quan:**
+
+1. Spring là framework gì?
+   → Framework Java hỗ trợ phát triển ứng dụng web, backend.
+2. IOC là gì?
+   → Inversion of Control – nguyên lý chính của Spring.
+3. Spring MVC là gì?
+   → Module xây dựng ứng dụng web theo mô hình MVC.
+4. AOP dùng để làm gì?
+   → Xử lý logging, bảo mật, transaction không ảnh hưởng đến logic chính.
+5. Spring hỗ trợ ORM nào?
+   → Hibernate, JPA, JDBC.
+6. Spring Boot khác Spring Framework thế nào?
+   → Spring Boot cấu hình tự động, giảm boilerplate code.
+7. ApplicationContext là gì?
+   → Container quản lý bean trong Spring.
+8. Bean là gì trong Spring?
+   → Là đối tượng được Spring quản lý.
+9. @Component khác @Service thế nào?
+   → `@Service` rõ ràng hơn về nghiệp vụ, nhưng đều là bean.
+10. Dependency Injection là gì?
+    → Kỹ thuật Spring dùng để inject phụ thuộc vào class.
+
+---
+
+### **Câu 10: Business Layer không có chức năng nào sau đây?**
+
+**Đáp án đúng: C. Hiển thị CSDL**
+
+🔍 **Giải thích các lựa chọn:**
+
+* **A. Chuyển đổi dữ liệu của DAL**
+  → Có, xử lý logic từ dữ liệu DAL trả về.
+* **B. Lưu cập nhật dữ liệu**
+  → Có, vì có thể gọi DAO để lưu dữ liệu sau xử lý.
+* **C. Hiển thị CSDL** ✅
+  → Không phải, hiển thị là của UI/View Layer.
+* **D. Tất cả đều đúng**
+  → Sai vì C không đúng.
+
+📘 **10 câu hỏi lý thuyết liên quan:**
+
+1. Business Layer là gì?
+   → Tầng xử lý logic nghiệp vụ trong ứng dụng.
+2. DAL là gì?
+   → Data Access Layer – tầng truy xuất dữ liệu.
+3. Tại sao cần Business Layer?
+   → Tách biệt logic với truy vấn dữ liệu.
+4. UI Layer có vai trò gì?
+   → Giao tiếp với người dùng.
+5. Việc validate dữ liệu nên ở đâu?
+   → Business Layer.
+6. Business Layer có gọi DAO được không?
+   → Có.
+7. Spring Service dùng ở tầng nào?
+   → Business Layer.
+8. Lưu trữ dữ liệu vào DB ở đâu?
+   → Gọi từ Business Layer đến DAL.
+9. Có thể gộp Business và DAO không?
+   → Có, nhưng không nên.
+10. View hiển thị dữ liệu từ đâu?
+    → Từ Business Layer trả về (qua Controller).
+
+Cảm ơn bạn đã bổ sung hình ảnh. Mình sẽ tiếp tục từ **câu 11 đến câu 16**, như yêu cầu:
+
+* ✅ Đáp án đúng
+* 📘 Giải thích **tất cả các lựa chọn**
+* ➕ Gợi ý **10 câu hỏi lý thuyết trắc nghiệm** tương tự
+
+---
+
+### **Câu 11: Trong sơ đồ ERD, chọn phát biểu sai**
+
+✅ **Đáp án đúng: D. Có biểu diễn các phương thức của thực thể**
+
+🔍 **Giải thích từng lựa chọn:**
+
+* **A. Tên thực thể và thuộc tính được biểu diễn bằng hình hình chữ nhật, hình tròn** ✅
+  → ĐÚNG. Trong ERD:
+
+  * Thực thể: hình chữ nhật
+  * Thuộc tính: hình elip (hình tròn)
+* **B. Quan hệ giữa 2 thực thể được biểu diễn bằng hình thoi** ✅
+  → ĐÚNG. Mối quan hệ = hình thoi
+* **C. Số degree giữa các thực thể thường là 2** ✅
+  → ĐÚNG. 2 thực thể tham gia một quan hệ = binary relationship (phổ biến nhất)
+* **D. Có biểu diễn các phương thức của thực thể** ❌
+  → SAI. ERD **chỉ mô tả dữ liệu**, không có phương thức/hành vi như trong UML.
+
+📘 **10 câu lý thuyết liên quan:**
+
+1. ERD là gì? → Entity Relationship Diagram
+2. Thực thể biểu diễn bằng gì? → Hình chữ nhật
+3. Mối quan hệ biểu diễn bằng gì? → Hình thoi
+4. Thuộc tính biểu diễn bằng gì? → Hình elip
+5. Khóa chính có thể biểu diễn bằng cách? → Gạch chân
+6. Mối quan hệ nhiều-nhiều viết như thế nào? → M\:N
+7. ERD mô tả hành vi hệ thống đúng không? → Sai
+8. ERD thuộc giai đoạn nào? → Phân tích & thiết kế
+9. ERD có hỗ trợ chuẩn hóa không? → Không trực tiếp
+10. ERD có dùng cho NoSQL không? → Chủ yếu dùng cho CSDL quan hệ
+
+---
+
+### **Câu 12: Loại liên kết tồn tại trong sơ đồ lớp trên là?**
+
+✅ **Đáp án đúng: B. Composition**
+
+🔍 **Giải thích từng lựa chọn:**
+
+* **A. Aggregation**
+  → Quan hệ "có-mà-không-phụ-thuộc" → biểu diễn bằng hình kim cương rỗng
+* **B. Composition** ✅
+  → "Có-và-phụ-thuộc" (Entity1 chứa Entity2 và Entity2 **không tồn tại riêng lẻ**)
+  → Biểu diễn bằng hình kim cương tô đen
+* **C. Inheritance**
+  → Quan hệ kế thừa, mũi tên tam giác rỗng
+* **D. Realization**
+  → Interface được class triển khai
+
+📘 **10 câu hỏi lý thuyết:**
+
+1. Composition là gì? → Quan hệ chặt giữa 2 lớp (1 sống thì 2 sống, 1 chết thì 2 cũng chết)
+2. Aggregation là gì? → Quan hệ "có" nhưng rời rạc
+3. Ký hiệu của Inheritance? → Mũi tên tam giác rỗng
+4. UML là viết tắt của? → Unified Modeling Language
+5. Quan hệ kế thừa khác gì với composition? → Kế thừa là "is-a", composition là "has-a"
+6. Class biểu diễn bằng gì trong UML? → Hình chữ nhật chia 3 phần
+7. UML có mấy sơ đồ chính? → 14 (có 2 nhóm: structural và behavioral)
+8. Class Diagram thuộc nhóm nào? → Structural
+9. Quan hệ giữa object được gọi là? → Association
+10. Realization áp dụng khi nào? → Khi class implements interface
+
+---
+
+### **Câu 13: Route mặc định, đầy đủ trong MVC là?**
+
+✅ **Đáp án đúng: C. {controller}/{action}/{id}**
+
+🔍 **Giải thích:**
+
+* **A. "/{action}/{controller}/{id}"**
+  → Sai thứ tự
+* **B. "{controller}/{id}"**
+  → Thiếu `action`
+* **C. "{controller}/{action}/{id}"** ✅
+  → Đúng format trong MVC routing chuẩn (Spring hay ASP.NET)
+* **D. "{controller}/{action}"**
+  → Thiếu `id` → không đầy đủ
+
+📘 **10 câu hỏi lý thuyết:**
+
+1. MVC là gì? → Model – View – Controller
+2. Controller đảm nhiệm gì? → Điều hướng luồng xử lý
+3. Model là gì? → Tầng xử lý dữ liệu
+4. View là gì? → Giao diện người dùng
+5. Route trong MVC là gì? → Cấu trúc định tuyến tới controller/action
+6. Spring Boot dùng annotation nào cho controller? → `@RestController`
+7. Để mapping URL dùng gì? → `@RequestMapping` hoặc `@GetMapping`
+8. Action là gì trong MVC? → Một phương thức xử lý logic
+9. Spring Boot dùng route động bằng cú pháp nào? → `/users/{id}`
+10. Tên mặc định controller route trong Spring? → Không có, tự định nghĩa
+
+---
+
+### **Câu 14: Hàm này thuộc lớp nào?**
+
+✅ **Đáp án đúng: B. BL (Business Layer)**
+
+📦 **Giải thích:**
+
+```java
+public void Add() {
+  CustomerDAL.AddCustomer(this);
+}
+```
+
+→ Hàm gọi DAL để thêm dữ liệu → thể hiện logic nghiệp vụ → thuộc **Business Layer**.
+
+* **A. DAL**
+  → DAL là nơi trực tiếp thao tác với DB, nhưng không xử lý logic.
+* **B. BL** ✅
+  → Đúng, xử lý dữ liệu rồi gọi DAL → BL
+* **C. UI**
+  → Tầng giao diện → không xử lý dữ liệu
+* **D. Data**
+  → Không phải tầng cụ thể
+
+📘 **10 câu hỏi:**
+
+1. DAL là gì? → Data Access Layer
+2. BL là gì? → Business Logic Layer
+3. UI là gì? → User Interface
+4. BL gọi DAL đúng không? → Đúng
+5. BL có xử lý validate không? → Có thể có
+6. BL là tầng trung gian? → Đúng
+7. Có thể bỏ qua BL? → Không nên
+8. View có gọi trực tiếp DAL không? → Không
+9. Nếu DB thay đổi, BL có bị ảnh hưởng không? → Có thể
+10. `Service` trong Spring thuộc tầng nào? → BL
+
+---
+
+### **Câu 15: Điều nào đúng với Controllers in Spring?**
+
+✅ **Đáp án đúng: B. An interface**
+
+🔍 **Giải thích:**
+
+* **A. An abstract class**
+  → Sai. Spring controller không bắt buộc là abstract
+* **B. An interface** ✅
+  → Đúng theo Spring design, controller thường implement interface (hoặc class thường có annotation)
+* **C. Concrete class**
+  → Không bắt buộc phải là concrete class
+* **D. Final class**
+  → Không thể mở rộng, ít dùng trong Spring
+
+📘 **10 câu hỏi liên quan:**
+
+1. Controller trong Spring là gì? → Lớp xử lý HTTP Request
+2. Annotation dùng là gì? → `@Controller`, `@RestController`
+3. Controller có thể là interface không? → Có, nhưng hiếm dùng hơn class
+4. Spring hỗ trợ REST qua gì? → `@RestController`
+5. Spring dùng gì để map route? → `@RequestMapping`, `@GetMapping`
+6. Spring Boot khác gì Spring MVC? → Cấu hình tự động
+7. Service khác Controller gì? → Service xử lý logic, Controller chỉ điều hướng
+8. Controller có gọi trực tiếp DB không? → Không nên
+9. Controller có thể trả về JSON? → Có
+10. Controller trả về View khi nào? → Khi dùng `@Controller` thay vì `@RestController`
+
+---
+
+### **Câu 16: Lớp nào dùng để truy vấn SQL trong Spring?**
+
+🔍 **Giải thích:**
+
+* **A. DBHelper**
+  → Không phải lớp của Spring
+* **B. JdbcTemplate**✅
+* **C. DBTemplate** 
+  → Có thể là tên tùy chỉnh, nhưng không phổ biến bằng JdbcTemplate
+* **D. JDBCHelper**
+  → Không có trong Spring
+
+👉 **Thực tế đúng nhất là `JdbcTemplate` (B)**
+
+📘 **10 câu hỏi lý thuyết:**
+
+1. JdbcTemplate là gì? → Lớp của Spring để thao tác DB
+2. Cần cấu hình gì để dùng JdbcTemplate? → DataSource
+3. Có thể dùng SQL thuần với JdbcTemplate không? → Có
+4. JdbcTemplate trả về gì? → Object, List, primitive…
+5. Có cần đóng kết nối thủ công không? → Không, Spring quản lý
+6. JdbcTemplate có thể dùng PreparedStatement không? → Có
+7. ORM khác JdbcTemplate thế nào? → ORM là ánh xạ đối tượng, JdbcTemplate dùng SQL
+8. Spring hỗ trợ ORM nào? → JPA, Hibernate
+9. JdbcTemplate nằm trong package nào? → `org.springframework.jdbc.core`
+10. Dùng JdbcTemplate có cần DAO không? → Nên có
+
+
+

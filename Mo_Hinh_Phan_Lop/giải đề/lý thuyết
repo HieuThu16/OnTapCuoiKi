@@ -1,0 +1,770 @@
+    MÔ HÌNH PHÂN LỚP 3 LỚP (THREE-TIER ARCHITECTURE)
+Mô hình 3 lớp là kiến trúc phần mềm phổ biến giúp tổ chức mã nguồn rõ ràng, dễ bảo trì và mở rộng. Gồm 3 tầng chính:
+1. Presentation Layer (Tầng trình bày / Giao diện người dùng)
+Hay còn gọi là: UI (User Interface) / Front-End / View
+
+✔️ Chức năng chính:
+Hiển thị dữ liệu cho người dùng
+
+Thu thập dữ liệu từ người dùng (qua form, input,...)
+
+Gửi yêu cầu (request) đến tầng xử lý (Business Layer)
+
+Nhận và xử lý sự kiện giao diện (event: click, submit,...)
+2. Business Logic Layer (Tầng xử lý nghiệp vụ / Business Layer - BL)
+Còn gọi là: Middle Tier / Domain Layer / Logic Layer
+
+✔️ Chức năng chính:
+Xử lý logic nghiệp vụ của ứng dụng
+
+Xử lý tính toán, kiểm tra điều kiện, ràng buộc,...
+
+Nhận dữ liệu từ UI và gửi xuống tầng Data Access
+
+Là nơi tách biệt phần xử lý logic khỏi giao diện
+3. Data Access Layer (Tầng truy xuất dữ liệu / DAL)
+Còn gọi là: Data Layer / Persistence Layer
+
+✔️ Chức năng chính:
+Giao tiếp với hệ quản trị cơ sở dữ liệu (MySQL, SQL Server,...)
+
+Thực hiện truy vấn (SQL), lưu trữ, đọc, cập nhật và xóa dữ liệu
+
+Tách biệt việc truy xuất dữ liệu khỏi logic xử lý
+💡 Ví dụ đơn giản (thêm khách hàng)
+Presentation Layer:
+btnSave.addActionListener(e -> customerBL.AddCustomer(customer));
+Business Layer:
+public class CustomerBL {
+    public void AddCustomer(Customer c) {
+        customerDAL.insertCustomer(c);
+    }
+}
+Data Access Layer:
+public class CustomerDAL {
+    public void insertCustomer(Customer c) {
+        String sql = "INSERT INTO Customer VALUES (?, ?)";
+        // sử dụng JdbcTemplate hoặc Connection để thực thi
+    }
+}
+
+Dưới đây là toàn bộ **lý thuyết mô hình MVC (Model – View – Controller)** một cách rõ ràng, dễ hiểu, có **in đậm** những phần **trọng tâm dễ ra trắc nghiệm**, kèm ví dụ minh họa:
+
+---
+
+# 🧠 **MÔ HÌNH MVC LÀ GÌ?**
+
+**MVC (Model – View – Controller)** là một mô hình thiết kế phần mềm **chia chương trình thành 3 phần riêng biệt** để quản lý code tốt hơn, dễ bảo trì và mở rộng.
+
+---
+
+# ✅ **CÁC THÀNH PHẦN TRONG MVC**
+## 1. **Model – Mô hình dữ liệu**
+### ✔️ Nhiệm vụ:
+* **Quản lý dữ liệu và logic nghiệp vụ**
+* Kết nối với cơ sở dữ liệu (CSDL)
+* Thực hiện các thao tác CRUD (Create, Read, Update, Delete)
+
+### 🧠 Trắc nghiệm dễ ra:
+* **“Thành phần nào chịu trách nhiệm xử lý dữ liệu?” → Model**
+--
+## 2. **View – Giao diện người dùng**
+### ✔️ Nhiệm vụ:
+* **Hiển thị dữ liệu cho người dùng**
+* **Thu thập dữ liệu nhập vào (qua form, button, input,...)**
+* **Nhận sự kiện từ người dùng** (click, nhập liệu,...)
+### 🧠 Trắc nghiệm dễ ra:
+* **“Lớp View có chức năng gì?” → Hiển thị dữ liệu và nhận sự kiện**
+* **“Tầng nào nhận sự kiện trong mô hình MVC?” → View**
+---
+## 3. **Controller – Bộ điều khiển**
+### ✔️ Nhiệm vụ:
+* **Nhận yêu cầu từ View**
+* **Gọi các phương thức trong Model để xử lý**
+* **Trả dữ liệu về cho View**
+
+
+# 🔁 **QUY TRÌNH HOẠT ĐỘNG MVC**
+1. **Người dùng thao tác với View** (ví dụ: click “Đăng nhập”)
+2. **View gửi yêu cầu đến Controller**
+3. **Controller xử lý yêu cầu và gọi Model để thao tác dữ liệu**
+4. **Model trả kết quả về Controller**
+5. **Controller gửi dữ liệu tới View để hiển thị**
+
+# 📌 **So sánh MVC và mô hình 3 lớp**
+
+| Đặc điểm             | MVC                       | 3-Layer Architecture      |
+| -------------------- | ------------------------- | ------------------------- |
+| Mục tiêu chính       | Tổ chức giao diện & logic | Tổ chức toàn bộ kiến trúc |
+| Tầng giao diện       | View                      | Presentation Layer        |
+| Tầng xử lý nghiệp vụ | Controller                | Business Logic Layer      |
+| Tầng dữ liệu         | Model                     | Data Access Layer         |
+
+Dưới đây là toàn bộ kiến thức tổng hợp về **ORM (Object-Relational Mapping)** – rất hữu ích cho kiểm tra, thực hành và làm đồ án. Mình sẽ **in đậm các ý dễ ra trắc nghiệm** và cung cấp ví dụ bằng Java (Hibernate) để bạn hiểu rõ hơn.
+
+---
+
+# 🧠 ORM là gì?
+
+**ORM (Object-Relational Mapping)** là một **kỹ thuật lập trình** giúp **chuyển đổi dữ liệu giữa hệ quản trị cơ sở dữ liệu quan hệ (RDBMS)** (như MySQL, PostgreSQL...) và **các đối tượng trong ngôn ngữ lập trình hướng đối tượng** (như Java, C#...).
+
+👉 **Mục tiêu chính:**
+Giúp lập trình viên **làm việc với database thông qua đối tượng**, **không cần viết câu lệnh SQL thuần**.
+
+---
+
+# ✅ Ưu điểm của ORM
+
+* **Giảm code SQL thủ công** → dễ viết code hơn
+* **Dễ bảo trì, dễ mở rộng**
+* **Tự động ánh xạ (mapping) giữa bảng và class**
+* **Hỗ trợ các mối quan hệ: One-to-One, One-to-Many, Many-to-Many**
+* **Hỗ trợ transaction, lazy loading, caching,...**
+
+---
+
+# ⚠️ Nhược điểm của ORM
+
+* Không linh hoạt bằng viết SQL thuần
+* Xử lý kém với truy vấn phức tạp, đặc biệt là JOIN nhiều bảng
+* **Hiệu suất đôi khi kém hơn dùng JDBC trực tiếp**
+
+---
+
+# 🔰 Các thư viện ORM phổ biến
+
+| Ngôn ngữ | ORM                                      |
+| -------- | ---------------------------------------- |
+| Java     | **Hibernate**, JPA (Jakarta Persistence) |
+| C#       | Entity Framework                         |
+| Python   | SQLAlchemy, Django ORM                   |
+| PHP      | Doctrine ORM, Eloquent (Laravel)         |
+
+---
+
+# 📦 Cách hoạt động của ORM
+
+### Ví dụ:
+
+Giả sử có bảng `users` trong MySQL:
+
+```sql
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  email VARCHAR(100)
+);
+```
+ORM sẽ ánh xạ thành class Java như sau:
+```java
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String name;
+    private String email;
+
+    // getters, setters
+}
+---
+# 📌 Các annotation quan trọng trong ORM (Hibernate / JPA)
+
+| Annotation                                             | Ý nghĩa                                      |
+| ------------------------------------------------------ | -------------------------------------------- |
+| `@Entity`                                              | Đánh dấu class là 1 thực thể ánh xạ với bảng |
+| `@Table(name = "...")`                                 | Chỉ định tên bảng tương ứng                  |
+| `@Id`                                                  | Chỉ định khóa chính                          |
+| `@GeneratedValue`                                      | Tự động tăng giá trị id                      |
+| `@Column(name = "...")`                                | Ánh xạ tên cột nếu khác tên biến             |
+| `@OneToMany`, `@ManyToOne`, `@ManyToMany`, `@OneToOne` | Ánh xạ các mối quan hệ giữa các entity       |
+
+---
+
+# 🔄 Các loại quan hệ trong ORM
+
+## 1. **One-to-One**
+
+Ví dụ: Mỗi `User` có một `Profile`.
+
+```java
+@OneToOne
+@JoinColumn(name = "profile_id")
+private Profile profile;
+```
+
+## 2. **One-to-Many**
+
+Ví dụ: Một `User` có nhiều `Post`.
+
+```java
+@OneToMany(mappedBy = "user")
+private List<Post> posts;
+```
+
+## 3. **Many-to-One**
+
+Ví dụ: Nhiều `Post` thuộc về 1 `User`.
+
+```java
+@ManyToOne
+@JoinColumn(name = "user_id")
+private User user;
+```
+
+## 4. **Many-to-Many**
+
+Ví dụ: Nhiều `Student` học nhiều `Course`.
+
+```java
+@ManyToMany
+@JoinTable(
+  name = "student_course",
+  joinColumns = @JoinColumn(name = "student_id"),
+  inverseJoinColumns = @JoinColumn(name = "course_id")
+)
+private Set<Course> courses;
+```
+
+---
+
+# 🔧 ORM vs JDBC (truy vấn thuần)
+
+| Tiêu chí       | ORM                              | JDBC truyền thống         |
+| -------------- | -------------------------------- | ------------------------- |
+| Tính dễ dùng   | **Cao (code ít, dễ hiểu)**       | Phải viết SQL thủ công    |
+| Mapping        | Tự động ánh xạ với class         | Phải ánh xạ thủ công      |
+| Tính mở rộng   | Cao                              | Trung bình                |
+| Hiệu năng      | Có thể kém nếu truy vấn phức tạp | Nhanh nếu viết SQL tối ưu |
+| Tính kiểm soát | Kém hơn JDBC                     | Kiểm soát toàn bộ         |
+
+---
+
+# 📝 Câu hỏi trắc nghiệm mẫu
+
+1. ORM là gì?
+   → **Kỹ thuật ánh xạ giữa đối tượng và bảng dữ liệu**
+
+2. Annotation nào dùng để đánh dấu khóa chính?
+   → `@Id`
+
+3. Mối quan hệ giữa lớp `Student` và `Course` (nhiều - nhiều) dùng annotation nào?
+   → **@ManyToMany**
+
+4. ORM hỗ trợ điều gì sau đây?
+
+   * a. Lazy Loading
+   * b. Mapping bảng sang class
+   * c. Transaction
+   * d. Tất cả các đáp án trên
+     → **Đáp án đúng: d**
+
+5. ORM phù hợp nhất khi nào?
+   → **Dự án vừa hoặc lớn, muốn dễ bảo trì và ít viết SQL**
+Dưới đây là một ví dụ **đầy đủ CRUD bằng Hibernate với Spring Boot**, sử dụng `User` entity (bao gồm các thao tác Create, Read, Update, Delete).
+
+ 
+```
+└── src/main/java/com/example/demo/
+    ├── entity/User.java
+    ├── repository/UserRepository.java
+    ├── service/UserService.java
+    ├── controller/UserController.java
+    └── DemoApplication.java
+```
+---
+## 1. `User` Entity (Dùng JPA - Hibernate)
+package com.example.demo.entity;
+import jakarta.persistence.*;
+@Entity
+@Table(name = "users")
+public class User {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String email;
+
+    // Constructors
+    public User() {}
+
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters & Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+
+
+## 2. `UserRepository` (Dùng `JpaRepository`)
+package com.example.demo.repository;
+import com.example.demo.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+}
+
+
+## 3. `UserService` (Chứa logic nghiệp vụ)
+
+@Service
+public class UserService {
+
+    @Autowired
+    private UserRepository userRepository;
+
+    public User createUser(User user) {
+        return userRepository.save(user);
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    public Optional<User> getUserById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    public User updateUser(Long id, User userDetails) {
+        User user = userRepository.findById(id).orElseThrow();
+        user.setName(userDetails.getName());
+        user.setEmail(userDetails.getEmail());
+        return userRepository.save(user);
+    }
+
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
+}
+
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @PostMapping
+    public User createUser(@RequestBody User user) {
+        return userService.createUser(user);
+    }
+
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable Long id) {
+        return userService.getUserById(id).orElse(null);
+    }
+
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody User userDetails) {
+        return userService.updateUser(id, userDetails);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+    }
+}
+
+Dưới đây là toàn bộ kiến thức cơ bản **cần nhớ về Hibernate** – một phần rất **quan trọng trong lập trình Java và ORM**, thường được hỏi trong kiểm tra và thực hành.
+
+## 🔰 1. Hibernate là
+**Hibernate** là một **framework ORM mã nguồn mở** cho Java, dùng để **ánh xạ các đối tượng Java (class) với bảng trong cơ sở dữ liệu quan hệ (RDBMS)**.
+👉 Nó giúp **quản lý cơ sở dữ liệu bằng lập trình hướng đối tượng**, thay vì phải viết SQL thủ công.
+---
+## ✅ 2. Ưu điểm của Hibernate
+* **Tự động ánh xạ (mapping)** giữa class và table
+* **Không cần viết nhiều SQL** → dễ bảo trì, gọn gàng
+* Hỗ trợ **transaction**, **lazy loading**, **caching**,…
+* **Độc lập CSDL** (MySQL, PostgreSQL, Oracle, H2,…)
+* Quản lý mối quan hệ **One-to-One, One-to-Many, Many-to-Many**
+---
+## ⚙️ 3. Cách hoạt động của Hibernate
+1. **Hibernate Configuration**: Đọc file `hibernate.cfg.xml` hoặc cấu hình Spring Boot để kết nối database.
+2. **SessionFactory**: Tạo ra các `Session`.
+3. **Session**: Dùng để thao tác với DB (thêm, sửa, xóa, truy vấn).
+4. **Transaction**: Đảm bảo an toàn dữ liệu (ACID).
+---
+## 📌 4. Các thành phần chính của Hibernate
+| Thành phần         | Chức năng                                               |
+| ------------------ | ------------------------------------------------------- |
+| **Configuration**  | Cấu hình Hibernate (database, dialect, driver, entity…) |
+| **SessionFactory** | Factory tạo `Session`                                   |
+| **Session**        | Làm việc với database                                   |
+| **Transaction**    | Quản lý giao dịch                                       |
+| **Query** / HQL    | Truy vấn dữ liệu                                        |
+
+---
+
+## 🧾 5. Annotation quan trọng trong Hibernate
+
+| Annotation          | Ý nghĩa                                |
+| ------------------- | -------------------------------------- |
+| `@Entity`           | Đánh dấu class là thực thể ánh xạ bảng |
+| `@Table(name = "")` | Tên bảng                               |
+| `@Id`               | Khóa chính                             |
+| `@GeneratedValue`   | Tự động tăng                           |
+| `@Column`           | Ánh xạ cột                             |
+| `@OneToMany`        | Một-nhiều                              |
+| `@ManyToOne`        | Nhiều-một                              |
+| `@ManyToMany`       | Nhiều-nhiều                            |
+| `@JoinColumn`       | Cột khóa ngoại                         |
+
+---
+
+## 🧪 6. Hibernate Query Language (HQL)
+
+Giống SQL nhưng dùng tên class và field thay vì tên bảng.
+
+**Ví dụ:**
+Session session = sessionFactory.openSession();
+Query query = session.createQuery("FROM User WHERE name = :name");
+query.setParameter("name", "Nam");
+List<User> users = query.list();
+```
+--
+
+## 🔄 7. Các hàm CRUD phổ biến
+
+| Phương thức Hibernate | Mô tả       |
+| --------------------- | ----------- |
+| `save()`              | Thêm mới    |
+| `get()` / `find()`    | Tìm theo ID |
+| `update()`            | Cập nhật    |
+| `delete()`            | Xóa bản ghi |
+
+---
+
+## 📝 8. File cấu hình `hibernate.cfg.xml` (nếu không dùng Spring Boot)
+```xml
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/your_db</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">password</property>
+
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="show_sql">true</property>
+    <property name="hbm2ddl.auto">update</property>
+
+    <mapping class="com.example.User"/>
+  </session-factory>
+</hibernate-configuration>
+```
+
+
+## 💡 9. Một số cấu hình quan trọng trong Hibernate
+
+| Thuộc tính               | Ý nghĩa                                                          |
+| ------------------------ | ---------------------------------------------------------------- |
+| `hibernate.dialect`      | Biết cách viết SQL phù hợp với loại CSDL                         |
+| `hibernate.hbm2ddl.auto` | `update`, `create`, `validate`, `none` – cách Hibernate tạo bảng |
+| `show_sql`               | In SQL ra console                                                |
+
+
+Dưới đây là **toàn bộ kiến thức và ví dụ chi tiết** về **One-to-Many** và **Many-to-One** trong Hibernate (dùng với Spring Boot). Đây là phần **cực kỳ quan trọng**, thường xuất hiện trong thi lý thuyết lẫn khi làm đồ án thực tế.
+
+---
+## 🔁 1. One-to-Many và Many-to-One là gì?
+### ✅ One-to-Many
+* **Một đối tượng cha** có thể liên kết với **nhiều đối tượng con**.
+* Ví dụ: **Một User có nhiều Post.**
+
+### ✅ Many-to-One
+
+* **Nhiều đối tượng con** liên kết đến **một đối tượng cha**.
+* Ví dụ: **Nhiều Post thuộc về một User.**
+
+⚠️ Hai mối quan hệ này luôn đi kèm: **Một bên là `@OneToMany`, bên kia là `@ManyToOne`**.
+
+---
+
+## 📦 2. Cấu trúc bảng trong ví dụ
+
+Giả sử bạn có 2 bảng:
+* `users` (User)
+* `posts` (Post, có khóa ngoại `user_id` trỏ đến User)
+---
+## 🧱 3. Entity: User và Post
+### 🔹 `User.java` (One-to-Many side)
+```java
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    // Một User có nhiều Post
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Post> posts = new ArrayList<>();
+
+    // getters, setters
+}
+```
+
+### 🔹 `Post.java` (Many-to-One side)
+
+```java
+@Entity
+@Table(name = "posts")
+public class Post {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String content;
+
+    // Nhiều Post thuộc về một User
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    // getters, setters
+}
+```
+
+---
+
+## 🔁 4. Cách sử dụng (thêm dữ liệu)
+
+```java
+User user = new User();
+user.setName("Nguyễn Văn A");
+
+Post post1 = new Post();
+post1.setContent("Bài viết 1");
+post1.setUser(user); // thiết lập chủ nhân bài viết
+
+Post post2 = new Post();
+post2.setContent("Bài viết 2");
+post2.setUser(user);
+user.getPosts().add(post1);
+user.getPosts().add(post2);
+
+userRepository.save(user); // Tự động lưu cả 2 bài viết nhờ cascade
+```
+---
+
+## 💡 5. Chú thích các Annotation chính
+| Annotation                      | Ý nghĩa                                                  |
+| ------------------------------- | -------------------------------------------------------- |
+| `@OneToMany(mappedBy = "user")` | Quan hệ một-nhiều. `mappedBy` phải là tên field bên Post |
+| `cascade = CascadeType.ALL`     | Tự động lưu cả quan hệ con                               |
+| `orphanRemoval = true`          | Xóa con khi bị remove khỏi danh sách                     |
+| `@ManyToOne`                    | Quan hệ nhiều-một                                        |
+| `@JoinColumn(name = "user_id")` | Khóa ngoại                                               |
+
+## 🧠 6. Câu hỏi trắc nghiệm thường gặp
+1. **Annotation nào dùng để biểu diễn mối quan hệ One-to-Many trong Hibernate?**
+   → `@OneToMany`
+2. **Trong `@OneToMany`, thuộc tính `mappedBy` dùng để làm gì?**
+   → Xác định tên biến bên phía chủ sở hữu của quan hệ (phía Many).
+3. **CascadeType.ALL dùng để làm gì?**
+   → Tự động truyền thao tác save/update/delete đến các entity liên quan.
+4. **Trong quan hệ nhiều-một, cột khóa ngoại được ánh xạ bằng annotation nào?**
+   → `@JoinColumn`
+5. **Nếu muốn tự động xóa các phần tử con khi bị remove khỏi danh sách, dùng?**
+   → `orphanRemoval = true`
+
+## 🧪 7. Lưu ý khi triển khai
+
+* Đặt `@OneToMany(mappedBy = "user")` ở phía không giữ khóa ngoại.
+* Phía giữ khóa ngoại (ở đây là `Post`) sẽ có `@ManyToOne` và `@JoinColumn`.
+* Nên dùng `CascadeType.ALL` nếu muốn thao tác đồng thời.
+* Tránh **lặp vô hạn** khi `toString()` do gọi qua lại giữa hai class → dùng `@JsonIgnore` ở phía `@ManyToOne`.
+
+🔗 1. One-to-One (Quan hệ độc lập)
+✅ Khái niệm:
+One-to-One là quan hệ giữa 2 bảng mà mỗi bản ghi của bảng A chỉ liên kết với 1 bản ghi của bảng B và ngược lại.
+
+Ví dụ: Một User chỉ có một Profile riêng biệt và mỗi Profile chỉ thuộc về một User.
+
+📘 Ví dụ: User – Profile
+🔹 User.java
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String username;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "profile_id", referencedColumnName = "id")
+    private Profile profile;
+
+    // getters, setters
+}
+🔹 Profile.java
+@Entity
+@Table(name = "profiles")
+public class Profile {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String fullName;
+    private String address;
+
+    @OneToOne(mappedBy = "profile")
+    private User user;
+
+    // getters, setters
+}
+📌 Giải thích:
+@OneToOne: xác định quan hệ một-một
+
+@JoinColumn: bên giữ khóa ngoại (ở đây là User)
+
+mappedBy = "profile": chỉ định quan hệ ở phía ngược lại
+
+💡 Các chiến lược quan hệ trong One-to-One
+Chiến lược	Mô tả
+@JoinColumn	Bảng A giữ khóa ngoại trỏ đến bảng B
+@PrimaryKeyJoinColumn	Hai bảng dùng chung cùng một khóa chính (hiếm dùng)
+mappedBy	Dùng ở phía không sở hữu quan hệ
+
+📊 2. FetchType.LAZY vs EAGER
+✅ Khái niệm:
+Hibernate hỗ trợ 2 chế độ load dữ liệu liên quan (fetching):
+FetchType	Mô tả
+LAZY	Chỉ truy vấn dữ liệu khi cần dùng (trì hoãn)
+EAGER	Tự động load ngay lập tức cùng đối tượng cha
+
+🔍 Ví dụ:
+@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+private List<Post> posts;
+→ Khi gọi userRepository.findById(id), dữ liệu trong posts chưa được load ngay, chỉ khi gọi user.getPosts() thì Hibernate mới truy vấn.
+
+Ngược lại:
+
+
+@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+→ Dữ liệu posts sẽ load ngay lập tức khi User được truy vấn.
+
+⚠️ Lưu ý khi dùng
+Trường hợp	Nên dùng
+Dữ liệu liên quan ít và cần dùng ngay	EAGER
+Dữ liệu lớn, quan hệ phức tạp (OneToMany)	LAZY (tốt hơn cho hiệu suất)
+
+💥 Lỗi phổ biến:
+Khi dùng LAZY, nếu bạn đóng Session quá sớm, gọi getXXX() sẽ gây lỗi:
+org.hibernate.LazyInitializationException
+→ Cần xử lý qua:
+@Transactional
+Dùng fetch join trong JPQL/HQL
+Dưới đây là **toàn bộ kiến thức cơ bản và quan trọng nhất về Spring Boot** – phần thường **ra thi lý thuyết, trắc nghiệm** hoặc cần hiểu kỹ khi làm dự án thực tế:
+
+---
+
+## 🚀 1. **Spring Boot là gì?**
+
+> Spring Boot là một **framework** dựa trên Spring, giúp lập trình viên xây dựng ứng dụng web và microservices **một cách nhanh chóng, dễ dàng và ít cấu hình**.
+
+---
+
+## 🎯 2. **Mục tiêu của Spring Boot**
+
+* ✅ Tự động cấu hình (Auto-configuration)
+* ✅ Giảm cấu hình XML rườm rà
+* ✅ Tích hợp dễ dàng với cơ sở dữ liệu, security, RESTful API, v.v.
+* ✅ Chạy ứng dụng dễ dàng chỉ với `main()` (ứng dụng độc lập - standalone)
+
+---
+## 🧩 3. **Cấu trúc 3 lớp cơ bản trong Spring Boot**
+
+| Tầng           | Vai trò                              |
+| -------------- | ------------------------------------ |
+| **Controller** | Giao tiếp với client (giao diện/API) |
+| **Service**    | Xử lý logic nghiệp vụ                |
+| **Repository** | Truy cập dữ liệu (kết nối DB)        |
+---
+## 📦 4. **Các annotation thường gặp**
+| Annotation                          | Vai trò                          |
+| ----------------------------------- | -------------------------------- |
+| `@SpringBootApplication`            | Đánh dấu lớp chính chạy ứng dụng |
+| `@RestController`                   | Tạo controller RESTful           |
+| `@Service`                          | Đánh dấu tầng nghiệp vụ          |
+| `@Repository`                       | Kết nối cơ sở dữ liệu            |
+| `@Autowired`                        | Tự động tiêm phụ thuộc           |
+| `@Entity`                           | Ánh xạ lớp Java thành bảng CSDL  |
+| `@Id`                               | Định danh khóa chính             |
+| `@GeneratedValue`                   | Tự động tăng ID                  |
+| `@GetMapping`, `@PostMapping`, etc. | Mapping các HTTP method          |
+---
+## 🧪 5. **Cấu trúc thư mục cơ bản**
+
+```
+src/
+ └── main/
+      └── java/
+           └── com.example.demo/
+                 ├── controller/
+                 ├── service/
+                 ├── repository/
+                 ├── model/
+                 └── DemoApplication.java
+```
+---
+## 🔁 6. **CRUD cơ bản với Spring Boot**
+
+| Phương thức | Annotation       | Chức năng   |
+| ----------- | ---------------- | ----------- |
+| `GET`       | `@GetMapping`    | Lấy dữ liệu |
+| `POST`      | `@PostMapping`   | Tạo mới     |
+| `PUT`       | `@PutMapping`    | Cập nhật    |
+| `DELETE`    | `@DeleteMapping` | Xóa dữ liệu |
+
+---
+## 🧠 7. **Spring Boot DevTools**
+
+* Tự động **reload lại ứng dụng** khi có thay đổi code.
+* Giúp lập trình nhanh hơn mà không cần stop/start mỗi lần.
+
+---
+
+## 🐘 8. **Spring Boot với Cơ sở dữ liệu**
+
+* Kết nối thông qua `application.properties` hoặc `application.yml`
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ten_db
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+## 📘 9. **Spring Boot Starter Dependencies**
+
+Spring Boot cung cấp nhiều starter giúp thêm chức năng dễ dàng:
+
+| Starter                        | Chức năng              |
+| ------------------------------ | ---------------------- |
+| `spring-boot-starter-web`      | Web, REST API          |
+| `spring-boot-starter-data-jpa` | Kết nối và thao tác DB |
+| `spring-boot-starter-security` | Bảo mật                |
+| `spring-boot-starter-test`     | Unit test              |
+

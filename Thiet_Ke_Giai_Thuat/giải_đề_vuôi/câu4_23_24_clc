@@ -1,0 +1,27 @@
+
+a/ 
+Procedure Permutation(a[1..n], k, n)
+1   for i ← k to n do
+2       swap(a[k], a[i])
+3       if k = n then
+4           Print(a[1..n])
+5       else
+6           Permutation(a, k+1, n)
+7       swap(a[k], a[i])
+Duyệt từ vị trí k đến n, hoán đổi a[k] với từng phần tử phía sau.
+
+Gọi đệ quy để tạo hoán vị tiếp theo.
+
+Quay lui (swap lại) để khôi phục trạng thái ban đầu.
+
+Khi k = n thì in ra hoán vị hiện tại.
+
+b/ Procedure EvenLastPermutation(a[1..n], k, n)
+1   for i ← k to n do
+2       swap(a[k], a[i])
+3       if k = n then
+4           if a[n] mod 2 = 0 then
+5               Print(a[1..n])
+6       else
+7           EvenLastPermutation(a, k+1, n)
+8       swap(a[k], a[i])

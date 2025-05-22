@@ -1,0 +1,30 @@
+Chương 1:
+Các khái niệm, ký hiệu, độ tăng của hàm số, độ phức tạp của giải thuật.
+
+Chương 2:
+Chiến lược trực tiếp (brute-force).
+
+Chương 3: Chiến lược chia để trị.
+    - Nhân các số 
+    - Khoảng cách (23-24 đại trà )
+    - Cặp điểm gần nhất ( Đề 22-23 đại trà )
+Chương 4: Chiến lược biến đổi để trị.
+    -Tính duy nhất của một phần tử 
+    - HeapSort
+    - Horner (đề 23-24 clc , 22-23 đại trà)
+    - Bội số chung nhỏ nhất log2n 
+    - Tập giao của 2 tập (đề 17-18)
+Chương 5: Chiến lược quy hoạch động.
+    - Đồng xu (đề 17-18)
+    - Robot nhặt đồng xu (đề 23-24 đại trà) (đáp án slide chương5)
+    - cái túi 
+Chương 6: Chiến lược quy tham lam.
+    - Krusal
+    - Dijkstra
+    - Bài toán người du lịch
+    - Bài toán tô màu
+Chương 7: Chiến lược quay lui
+    - Tìm tất cả các xâu nhị phân n bits (đề 22-23 đại trà )
+    - Tìm tất cả các chỉnh hợp chập k của n số {1, 2, ..., n}
+    - Bài toán sắp đặt n quân hậu *bài này ra thì chết cơm
+    - Bài toán tìm hoán vị (đề 23-24 clc )

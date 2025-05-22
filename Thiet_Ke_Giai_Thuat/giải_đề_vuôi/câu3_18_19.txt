@@ -1,0 +1,19 @@
+for i ← 0 to n - 2 do
+    for j ← i + 1 to n - 1 do
+        if a[i] + a[j] = s then
+            return true
+return false
+
+Trường hợp tốt nhất (best case): O(1) — Nếu cặp đầu tiên đã thỏa mãn điều kiện.
+
+Trường hợp xấu nhất (worst case): O(n²) — Nếu không có cặp nào thỏa mãn (phải duyệt hết).
+
+c/ 
+1. sort(a)
+2. i ← 0
+3. j ← n - 1
+4. while i < j do
+5.     if a[i] + a[j] = s then return true
+6.     else if a[i] + a[j] < s then i ← i + 1
+7.     else j ← j - 1
+8. return false

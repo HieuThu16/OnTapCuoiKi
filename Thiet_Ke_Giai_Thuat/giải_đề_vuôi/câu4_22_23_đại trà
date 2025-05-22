@@ -1,0 +1,29 @@
+a/ 
+1   min ← ∞
+2   For i ← 1 to n − 1 do
+3       For j ← i + 1 to n do
+4           If (A[j] − A[i] < min)
+5               min ← A[j] − A[i]
+6   Return min
+
+chia để trị 
+
+ALGORITHM ClosestPair(a[], l, r) // a[] đã được sắp xếp tăng dần
+
+1  if l = r then return -1 // chỉ có 1 phần tử -> không có cặp
+2  else if l - r = 1       // chỉ có 2 phần tử
+3      return l            // trả về vị trí đầu tiên của cặp gần nhất
+4  else
+5      i ← ClosestPair(a[], l, (l + r) / 2)         // tìm cặp gần nhất bên trái
+6      j ← ClosestPair(a[], (l + r) / 2 + 1, r)     // tìm cặp gần nhất bên phải
+7      if a[i+1] - a[i] < a[(l+r)/2 + 1] - a[(l+r)/2] and a[i+1] - a[i] < a[j+1] - a[j]
+8          return i        // cặp bên trái là gần nhất
+9      else if a[j+1] - a[j] < a[(l+r)/2 + 1] - a[(l+r)/2] and a[j+1] - a[j] < a[i+1] - a[i]
+10         return j        // cặp bên phải là gần nhất
+11     else return (l + r) / 2 // cặp gần nhau nhất nằm ở ranh giới giữa 2 nửa
+
+T(n) = 
+  O(1)         nếu n < 3
+  2T(n/2) + O(1) nếu n ≥ 3
+
+

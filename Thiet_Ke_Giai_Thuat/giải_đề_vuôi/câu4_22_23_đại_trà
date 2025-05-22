@@ -1,0 +1,21 @@
+a/ 
+
+// a[0], a[1], ..., a[n] là các hệ số tương ứng với x⁰, x¹, ..., xⁿ
+
+1 p ← 0
+2 for i ← 0 to n
+3    do
+4       term ← a[i]
+5       for j ← 1 to i
+6           do term ← term * x
+7       p ← p + term
+8 return p
+
+
+ALGORITHM Horner(a[0..n], x)
+//a[0], a[1], .., a[n] là các hệ số tương ứng với x0, x1, ..., xn
+
+1 p ← a[n]
+2 for i ←n − 1 downto 0
+3 do p←x ∗ p + a[i]
+4 return p viết cái trực tiếp tương tự cách viết như này nè , còn cái này là biến đổi để trị đungs k

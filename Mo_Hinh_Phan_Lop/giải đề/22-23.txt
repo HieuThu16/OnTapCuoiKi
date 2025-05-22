@@ -202,6 +202,9 @@ d. Không có
 Khách hàng có thể có nhiều hóa đơn ⇒ multiplicity là * hoặc 0..*
 Hóa đơn luôn thuộc về một khách hàng ⇒ multiplicity là 1
 
+? Này Grok của Hiếu chọn B á =))) 
+
+
 18: Cho biết hàm này thuộc lớp nào?
 
 a. DAL

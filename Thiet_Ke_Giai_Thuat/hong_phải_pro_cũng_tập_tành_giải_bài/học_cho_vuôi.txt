@@ -1,22 +1,4 @@
 1/ Bài toán a mũ n 
-- Bình thường : 
-    Power(a, n)
-1. result ← 1
-2. for i ← 1 to n do
-3.     result ← result * a
-4. return result
-
-
-- Chia để trị 
-    Power(a, n)
-1. if n = 0 then return 1
-2. x ← Power(a, ⌊n / 2⌋)
-3. if n mod 2 = 1 then
-4.     return x * x * a
-5. else
-6.     return x * x
-
-
 2/ Sắp xếp âm dương 
 3/ Tìm max , min của 1 mảng 
 4/ 2 số gần nhất trong tập n cho sẵn 

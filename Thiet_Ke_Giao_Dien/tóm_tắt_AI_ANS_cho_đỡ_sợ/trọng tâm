@@ -1,0 +1,38 @@
+Câu 10 : 
+    6 nguyên tắc thiết kế của Donald A.Norman
+-1 Tính tường minh , khả năng nhìn thấy: 
+    Các chức năng và trạng thái quan trọng của hệ thống phải được hiển thị rõ ràng cho người dùng.
+    Người dùng cần biết những hành động nào có thể thực hiện và hệ thống đang ở trạng thái nào
+
+2- Phản hồi 
+    Hệ thống phải cung cấp thông tin phản hồi ngay lập tức và rõ dàng cho người dùng về kết quả của hành động họ vừa thực hiện
+
+3- Ràng buộc 
+    Giới hạn các hành động có thể thực hiện của người dùng để ngăn ngừa lỗi 
+
+4- Ánh xạ 
+    Mối quan hệ giữa các điều khiển và tác động của chúng lên hệ thống phải rõ ràng và trực quan 
+
+5 Tính nhất quán
+    Các yếu tố và hành động tương tự nên có giao diện và cách thức hoạt động giống nhau 
+
+6 Tính gợi ý 
+    Là những thuộc tính của một đối tượng cho người dùng biết nó có thể được sử dụng như thế nào
+
+
+    8 Quy tắc của Ben Shneiderman 
+-1 Phấn đấu cho sự nhất quán : Sử dụng thuật ngữ, biểu tượng , bố cục , màu sắc và hành vi nhất quán trong toàn bộ hệ thống
+-2 Cho phép người dùng thường xuyên sử dụng lối tắt: Cung cấp các phương thức nhanh hơn để thực hiện các tác vụ thường xuyên cho người dùng có kinh nghiệm
+-3 Cung cấp phản hồi giàu thông tin: Hệ thống có phản hồi phù hợp với mỗi hành động của người dùng.
+Hành động nhỏ có thể phản hồi kín đáo. Hành động lớn , phản hồi rõ ràng hơn
+-4 Thiết kế hội thoại để mang lại cảm giác hoàn tất: Các chuỗi hành động nên được tổ chức thành các nhóm có điểm bắt đầu, thực hiện và kết thúc rõ ràng.
+Để mang lại cho người dùng cảm giác hoàn thành một tác vụ
+-5 Cung cấp xử lí lỗi đơn giản: Hệ thống nên được thiết kế để người dùng ít mắc lỗi nhất có thể.
+Nếu lỗi xảy ra, hệ thống cung cấp cơ chế đơn giản, dễ hiểu để phát hiện và sửa lỗi
+-6 Cho phép dễ dàng hoàn tác hành động: Giảm lo lắng cho người dùng vì họ biết có thể quay lại
+-7 Hỗ trợ cảm giác kiểm soát nội tại: 
+    Người dùng có kinh nghiệm mong muốn cảm thấy họ là người điều khiển hệ thống chứ không phải ngược lại. 
+    Họ mong muốn chủ động bắt đầu hành động. 
+-8 Giảm tải bộ nhớ ngắn hạn : 
+    Con người có bộ nhớ ngắn hạn hạn chế. Tránh yêu cầu người dùng nhớ từ phần này sang phần khác của giao diện
+

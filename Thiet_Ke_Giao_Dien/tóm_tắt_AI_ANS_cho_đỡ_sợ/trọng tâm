@@ -36,3 +36,42 @@ Nếu lỗi xảy ra, hệ thống cung cấp cơ chế đơn giản, dễ hiể
 -8 Giảm tải bộ nhớ ngắn hạn : 
     Con người có bộ nhớ ngắn hạn hạn chế. Tránh yêu cầu người dùng nhớ từ phần này sang phần khác của giao diện
 
+câu 5: 
+    - Tại sao việc hiểu rõ người dùng ( khả năng , thói quen, lỗi , sự đa dạng) lại quan trọng?
+    Việc hiểu rõ người dùng là nền tảng của thiết kế lấy người dùng làm trung tâm và quan trọng vì:: 
+        - Phù hợp với khả năng của người dùng :
+            + Khả năng nhận thức: Thiết kế giao diện không gây quá tải thông tin , dễ hiểu dễ nhớ 
+            + Khả năng thể chất: Thiết kế các yếu tố tương tác dễ tiếp cận 
+        - Tận dụng thói quen và mô hình tư duy: Thiết kế dựa trên các quy ước và thói quen sử dụng công nghệ phổ biến giúp người dùng học nhanh và cảm thấy quen thuộc 
+        - Dự đoán và phòng tránh các lỗi thường gặp: 
+        -Đáp án sự đa dạng của người dùng
+            + Tuổi tác , kinh nghiệm sử dụng công nghệ
+            + Văn hóa , ngôn ngữ
+            + Khuyết tật 
+        - Tạo ra trải nghiệm tích cực 
+Câu 6: 
+    Trình bày các thành phần cơ bản (Input , output , memory , processor)
+        1 Input : Là quá trình con người tiếp nhận thoong tin từ môi trường 
+        ( trong HCI là giao diện máy tính ) thông qua các giác quan 
+        - Thị giác : 
+        - Thính giác:
+        _ Xúc giác
+
+        2: Bộ xử lí , nhận thức : Là nơi thông tin đầu vào được xử lí, so sánh với kiến thức đã co có
+        và đưa ra quyết định . Bao gồm
+            - Chú ý : 
+            - Tri giác: Diễn giải thông tin để hểu ý nghĩa
+            - Tư duy và đưa ra quyết định 
+        3: Bộ nhớ : là nơi thông tin được lưu trữ và truy xuất 
+        - Bộ nhớ cảm giác : lưu trữ thông tin cảm giác trong thời gian rất ngắn
+        - Bộ nhớ ngắn hạn / bộ nhớ làm việc 
+        - Bộ nhớ dài hạn:
+
+        4 Output : Hành động của con người để tương tác lại với hệ thống máy tính , dựa trên bộ xử lí 
+        - Vận dộng : Sử dụng tay gõ phím , di chuột 
+        - Giọng nói : 
+
+    Câu 7 : Nhận thức trong HCI 
+        - Tại sao cần tìm hiểu quá trình nhận thức của con người khi thiết kế
+        + Thiết kế giao diện trực quan và dễ sử dụng 
+        + Giảm tải nhận thức --;-

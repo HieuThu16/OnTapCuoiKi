@@ -21,3 +21,28 @@
 3/ Tìm max , min của 1 mảng 
 4/ 2 số gần nhất trong tập n cho sẵn 
 5/ Tập giao của A và B 
+
+
+
+câu 1 : 
+    a/ b / Tính lim     tử / mẫu 
+        - vô cùng :  tử > mẫu 
+        - 1 số ( khác 0 ) : nhìn được : 3,.... , 23 46 ... 1/3 => bằng nhau 
+        - 0 :  tử < mẫu 
+
+lim 9/10n : -> 0  -> bé hơn 
+lim 9n^2 / 10n : -> vô cùng  -> lớn hơn 
+lim nlog3(n) / 2nlog5(n) =  log3e * lnn /2 log5e * lnn =   
+
+
+
+        Tính:   
+
+
+
+            - O :   <=  
+            - ôm (omega) :   >= 
+        =>>    số 3  - O có tâm ( cái 1 + 2 )
+
+
+        n/2 + 1 + 3log2n <= n/2 + n + 3n = 5/2n Đặt c = 5/2 => đpcm   

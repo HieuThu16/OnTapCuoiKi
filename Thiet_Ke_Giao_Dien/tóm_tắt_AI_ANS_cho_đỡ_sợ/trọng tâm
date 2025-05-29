@@ -75,3 +75,27 @@ Câu 6:
         - Tại sao cần tìm hiểu quá trình nhận thức của con người khi thiết kế
         + Thiết kế giao diện trực quan và dễ sử dụng 
         + Giảm tải nhận thức --;-
+
+
+11: Kịch bản là gì ? Mục đích và đặc điểm của Kịch bản trong mô tả ? Ví dụ
+    Kịch bản : Là một câu chuyện mô tả cách 1 người dùng cụ thể thực hiện 1 tác vụ hoặc đạt được mục tiêu cụ thể 
+    bằng cách sử dụng hệ thống trong một bối cảnh nhất định. 
+    Kịch bản tập trung vào hành vi, động lực và trải nghiệm của người dùng 
+
+    - Mục đích của kịch bản:
+        + Hiểu rõ hơn về người dùng và ngữ cảnh sử dụng 
+        + Xác định yêu cầu chức năng và phi chức năng
+        + Giao tiếp ý tưởng thiết kế 
+        +Định hướng thiết kế và đánh giá
+        +Tạo cơ sở dữ  cho usecase usestory 
+    - Đặc điểm của kịch bản: 
+        +Tường thuật: Được viết dưới dạng câu chuyện
+        +Cuj thể: Mô tả người dùng , mục tiêu , hành động và bối cảnh cụ thể
+        +Tập trung vào người dùng: Kể câu chuyện từ góc nhìn của người dùng 
+        +Bao gồm động lực và cảm xúc: Giu0ps hiểu tại sao người dùng làm như vậy 
+        +Không mô tả chi tiết giao diện: Tập trung vào cái gì và tại sai , không phải như thế nào
+
+
+câu 9 : Trình bày khái niệm về usabily của giao diện phần mềm 
+
+

@@ -1,0 +1,170 @@
+## Câu 2 (3 điểm): Trang thêm sản phẩm
+
+### Giao diện thêm sản phẩm (ThemSP.php)
+
+```php
+<?php
+// Kết nối database
+$host = "localhost";
+$username = "root";
+$password = "root";
+$database = "BaiThiDB";
+
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+// Lấy danh sách nhà sản xuất cho dropdown
+$sql_nsx = "SELECT * FROM NHASANXUAT";
+$result_nsx = $conn->query($sql_nsx);
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm sản phẩm</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>QUẢN LÝ SẢN PHẨM</h2>
+        <form name="frmthemsp" action="xulythemsp.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Công ty sản xuất:</label>
+                <select name="cbocontysx" required>
+                    <option value="">-- Chọn công ty --</option>
+                    <?php while($row_nsx = $result_nsx->fetch_assoc()): ?>
+                        <option value="<?= $row_nsx['maNhaSanXuat'] ?>">
+                            <?= $row_nsx['tenNSX'] ?>
+                        </option>
+                    <?php endwhile; ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nhập tên sản phẩm:</label>
+                <input type="text" name="txttensp" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nhập giá chính thức:</label>
+                <input type="number" name="txtgia" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nhập giá đã được giảm:</label>
+                <input type="number" name="txtgiagiam" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label>Nhập mô tả:</label>
+                <textarea name="txtareamota" placeholder="Nhập mô tả sản phẩm..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>File upload hình đại diện:</label>
+                <input type="file" name="f_daidien" accept="image/*">
+            </div>
+
+            <button type="submit" name="btnthemsanpham">Thêm sản phẩm</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<?php $conn->close(); ?>
+```
+
+### Code xử lý thêm sản phẩm (xulythemsp.php)
+
+```php
+<?php
+// Kết nối database
+$host = "localhost";
+$username = "root";
+$password = "root";
+$database = "BaiThiDB";
+
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+if (isset($_POST['btnthemsanpham'])) {
+    $tensp = $_POST['txttensp'];
+    $gia = $_POST['txtgia'];
+    $giagiam = $_POST['txtgiagiam'] ?? 0;
+    $mota = $_POST['txtareamota'];
+    $mansx = $_POST['cbocontysx'];
+
+    // Xử lý upload file
+    $hinh = "";
+    if (isset($_FILES['f_daidien']) && $_FILES['f_daidien']['error'] == 0) {
+        $target_dir = "images/";
+        $hinh = basename($_FILES['f_daidien']['name']);
+        $target_file = $target_dir . $hinh;
+
+        // Tạo thư mục nếu chưa có
+        if (!file_exists($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+
+        move_uploaded_file($_FILES['f_daidien']['tmp_name'], $target_file);
+    }
+
+    // Thêm sản phẩm vào database
+    $stmt = $conn->prepare("INSERT INTO SANPHAM (tenSanPham, Gia, giamGia, moTa, Hinh, maNhaSanXuat) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sddssI", $tensp, $gia, $giagiam, $mota, $hinh, $mansx);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Thêm thành công'); window.location='ThemSP.php';</script>";
+    } else {
+        echo "<script>alert('Thêm thất bại: " . $stmt->error . "'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+```
+
+**Ghi chú:** Mã sản phẩm tăng tự động (AUTO_INCREMENT trong MySQL).

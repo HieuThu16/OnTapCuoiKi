@@ -1,0 +1,128 @@
+# BÀI TẬP PHP VÀ MYSQL
+
+## Câu 1 (2 điểm): Trình bày hiểu biết về PHP và MySQL + Code đăng nhập
+
+### Hiểu biết về PHP và MySQL
+
+**PHP (PHP: Hypertext Preprocessor):**
+- Là ngôn ngữ lập trình phía server (server-side scripting language)
+- Được thiết kế đặc biệt cho phát triển web
+- Mã nguồn mở, miễn phí và dễ học
+- Có thể nhúng trực tiếp vào HTML
+- Hỗ trợ nhiều hệ quản trị cơ sở dữ liệu
+- Chạy trên nhiều nền tảng (Windows, Linux, Unix, Mac OS X)
+
+**MySQL:**
+- Là hệ quản trị cơ sở dữ liệu quan hệ (RDBMS)
+- Mã nguồn mở, hiệu suất cao và đáng tin cậy
+- Sử dụng ngôn ngữ truy vấn SQL (Structured Query Language)
+- Hỗ trợ nhiều engine lưu trữ (InnoDB, MyISAM...)
+- Có khả năng xử lý dữ liệu lớn và nhiều người dùng đồng thời
+
+### Code giao diện đăng nhập (login.html)
+
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        .login-form {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form class="login-form" action="xuly_dangnhap.php" method="POST">
+        <h2>Đăng nhập hệ thống</h2>
+        <div class="form-group">
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" name="dangnhap">Đăng nhập</button>
+    </form>
+</body>
+</html>
+```
+
+### Code xử lý đăng nhập (xuly_dangnhap.php)
+
+```php
+<?php
+session_start();
+
+// Thông tin kết nối database
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "BaiThiDB";
+
+// Kết nối MySQL
+$conn = new mysqli($host, $username, $password, $database);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+if (isset($_POST['dangnhap'])) {
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+
+    // Bảo mật: sử dụng prepared statement để tránh SQL injection
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $user, $pass);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $_SESSION['user_id'] = $row['id'];
+        $_SESSION['username'] = $row['username'];
+        echo "<script>alert('Đăng nhập thành công!'); window.location='dashboard.php';</script>";
+    } else {
+        echo "<script>alert('Tên đăng nhập hoặc mật khẩu không đúng!'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+```
+

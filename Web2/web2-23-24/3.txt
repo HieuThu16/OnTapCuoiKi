@@ -1,0 +1,217 @@
+## Câu 3 (5 điểm): Quản lý tài khoản
+
+### Giao diện thêm tài khoản (themtaikhoan.php)
+
+```php
+<?php
+// Kết nối database
+$host = "localhost";
+$username = "root";
+$password = "root";
+$database = "BaiThiDB";
+
+$conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) {
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
+
+// Lấy danh sách quyền
+$sql_quyen = "SELECT * FROM QUYEN";
+$result_quyen = $conn->query($sql_quyen);
+?>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm tài khoản</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm Tài Khoản</h2>
+        <form id="formTaiKhoan" action="" method="POST">
+            <div class="form-group">
+                <label>Tên đăng nhập:</label>
+                <input type="text" name="tenDangNhap" id="tenDangNhap" required>
+                <span class="error" id="errorTenDN"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Mật khẩu:</label>
+                <input type="password" name="matKhau" id="matKhau" required>
+                <span class="error" id="errorMatKhau"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Quyền:</label>
+                <select name="maQuyen" required>
+                    <?php while($row_quyen = $result_quyen->fetch_assoc()): ?>
+                        <option value="<?= $row_quyen['maQuyen'] ?>">
+                            <?= $row_quyen['tenQuyen'] ?>
+                        </option>
+                    <?php endwhile; ?>
+                </select>
+            </div>
+
+            <button type="submit" name="themTaiKhoan">Thêm Tài Khoản</button>
+        </form>
+    </div>
+
+    <script>
+        // Validation JavaScript
+        document.getElementById('formTaiKhoan').addEventListener('submit', function(e) {
+            let tenDN = document.getElementById('tenDangNhap').value;
+            let matKhau = document.getElementById('matKhau').value;
+            let valid = true;
+
+            // Reset errors
+            document.getElementById('errorTenDN').textContent = '';
+            document.getElementById('errorMatKhau').textContent = '';
+
+            // Kiểm tra tên đăng nhập (6-20 ký tự)
+            if (tenDN.length < 6 || tenDN.length > 20) {
+                document.getElementById('errorTenDN').textContent = 'Tên đăng nhập phải từ 6-20 ký tự';
+                valid = false;
+            }
+
+            // Kiểm tra mật khẩu (8 ký tự, bao gồm chữ hoa, chữ thường, số)
+            let matKhauRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            if (!matKhauRegex.test(matKhau)) {
+                document.getElementById('errorMatKhau').textContent = 'Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số';
+                valid = false;
+            }
+
+            if (!valid) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+
+<?php
+// Xử lý thêm tài khoản
+if (isset($_POST['themTaiKhoan'])) {
+    $tenDangNhap = $_POST['tenDangNhap'];
+    $matKhau = $_POST['matKhau'];
+    $maQuyen = $_POST['maQuyen'];
+    $ngayTao = date('Y-m-d');
+    $tinhTrang = 1; // 1: Hoạt động, 0: Không hoạt động
+
+    // Kiểm tra tên đăng nhập đã tồn tại
+    $check_stmt = $conn->prepare("SELECT maTaiKhoan FROM TAIKHOAN WHERE tenDangNhap = ?");
+    $check_stmt->bind_param("s", $tenDangNhap);
+    $check_stmt->execute();
+    $check_result = $check_stmt->get_result();
+
+    if ($check_result->num_rows > 0) {
+        echo "<script>alert('Tên đăng nhập đã tồn tại!');</script>";
+    } else {
+        // Mã hóa mật khẩu
+        $matKhau_hash = password_hash($matKhau, PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("INSERT INTO TAIKHOAN (tenDangNhap, matKhau, ngayTaoTaiKhoan, tinhTrangTaiKhoan, maQuyen) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssiii", $tenDangNhap, $matKhau_hash, $ngayTao, $tinhTrang, $maQuyen);
+
+        if ($stmt->execute()) {
+            echo "<script>alert('Thêm thành công'); window.location='themtaikhoan.php';</script>";
+        } else {
+            echo "<script>alert('Thêm thất bại');</script>";
+        }
+        $stmt->close();
+    }
+    $check_stmt->close();
+}
+
+$conn->close();
+?>
+```
+
+### Chức năng xóa tài khoản
+
+```php
+<?php
+// File: xoa_taikhoan.php
+$host = "localhost";
+$username = "root";
+$password = "root";
+$database = "BaiThiDB";
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if (isset($_GET['id'])) {
+    $maTaiKhoan = $_GET['id'];
+
+    // Xác nhận xóa bằng JavaScript
+    echo "<script>
+        if (confirm('Bạn có chắc chắn muốn xóa tài khoản này?')) {
+            // Thực hiện xóa
+        } else {
+            window.history.back();
+        }
+    </script>";
+
+    $stmt = $conn->prepare("DELETE FROM TAIKHOAN WHERE maTaiKhoan = ?");
+    $stmt->bind_param("i", $maTaiKhoan);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Xóa thành công'); window.location='danhsach_taikhoan.php';</script>";
+    } else {
+        echo "<script>alert('Xóa thất bại'); window.history.back();</script>";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+```
+
+### Thông tin kết nối MySQL
+
+```
+Host name: localhost
+Username: root
+Password: root
+Database name: BaiThiDB
+```
+
+---
+
+

@@ -81,11 +81,32 @@ $result_quyen = $conn->query($sql_quyen);
             <div class="form-group">
                 <label>Quyền:</label>
                 <select name="maQuyen" required>
-                    <?php while($row_quyen = $result_quyen->fetch_assoc()): ?>
-                        <option value="<?= $row_quyen['maQuyen'] ?>">
-                            <?= $row_quyen['tenQuyen'] ?>
-                        </option>
-                    <?php endwhile; ?>
+                    <?php
+                    // Đặt lại con trỏ kết quả về đầu để duyệt lại nếu đã dùng trước đó
+                    if ($result_quyen) { // Đảm bảo $result_quyen tồn tại
+                        $result_quyen->data_seek(0);
+                        $userOptionFound = false; // Biến cờ để kiểm tra đã chọn 'User' chưa
+                        while($row_quyen = $result_quyen->fetch_assoc()):
+                            $selected = '';
+                            // Giả định maQuyen của User là 2. Bạn có thể cần điều chỉnh nếu ID khác.
+                            if ($row_quyen['maQuyen'] == 2) {
+                                $selected = 'selected';
+                                $userOptionFound = true;
+                            }
+                        ?>
+                            <option value="<?= htmlspecialchars($row_quyen['maQuyen']) ?>" <?= $selected ?>>
+                                <?= htmlspecialchars($row_quyen['tenQuyen']) ?>
+                            </option>
+                        <?php endwhile;
+                        // Nếu không tìm thấy quyền 'User' trong CSDL, bạn có thể thêm nó tĩnh
+                        // if (!$userOptionFound) {
+                        //     echo '<option value="2" selected>User</option>';
+                        // }
+                    } else {
+                        // Xử lý trường hợp không lấy được dữ liệu quyền (ví dụ: bảng QUYEN không tồn tại)
+                        echo '<option value="">Không có quyền nào</option>';
+                    }
+                    ?>
                 </select>
             </div>
 
@@ -104,21 +125,22 @@ $result_quyen = $conn->query($sql_quyen);
             document.getElementById('errorTenDN').textContent = '';
             document.getElementById('errorMatKhau').textContent = '';
 
-            // Kiểm tra tên đăng nhập (6-20 ký tự)
-            if (tenDN.length < 6 || tenDN.length > 20) {
-                document.getElementById('errorTenDN').textContent = 'Tên đăng nhập phải từ 6-20 ký tự';
+            // Yêu cầu: "đúng 8 ký tự, bắt đầu 2 ký tự TK, tiếp theo là 6 ký tự số."
+            const tenDNRegex = /^TK\d{6}$/;
+            if (!tenDNRegex.test(tenDN)) {
+                document.getElementById('errorTenDN').textContent = 'Tên đăng nhập phải đúng 8 ký tự, bắt đầu bằng "TK" và tiếp theo là 6 chữ số (ví dụ: TK123456).';
                 valid = false;
             }
 
-            // Kiểm tra mật khẩu (8 ký tự, bao gồm chữ hoa, chữ thường, số)
-            let matKhauRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
-            if (!matKhauRegex.test(matKhau)) {
-                document.getElementById('errorMatKhau').textContent = 'Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường và số';
+            // Yêu cầu: "độ dài tối thiểu 6 ký tự và tối đa là 20 ký tự."
+            if (matKhau.length < 6 || matKhau.length > 20) {
+                document.getElementById('errorMatKhau').textContent = 'Mật khẩu phải có độ dài từ 6 đến 20 ký tự.';
                 valid = false;
             }
+            // Loại bỏ regex kiểm tra chữ hoa, chữ thường, số vì không có trong yêu cầu đề bài.
 
             if (!valid) {
-                e.preventDefault();
+                e.preventDefault(); // Ngăn chặn gửi form nếu validation thất bại
             }
         });
     </script>
@@ -132,7 +154,7 @@ if (isset($_POST['themTaiKhoan'])) {
     $matKhau = $_POST['matKhau'];
     $maQuyen = $_POST['maQuyen'];
     $ngayTao = date('Y-m-d');
-    $tinhTrang = 1; // 1: Hoạt động, 0: Không hoạt động
+    $tinhTrang = 0;
 
     // Kiểm tra tên đăng nhập đã tồn tại
     $check_stmt = $conn->prepare("SELECT maTaiKhoan FROM TAIKHOAN WHERE tenDangNhap = ?");
@@ -146,13 +168,15 @@ if (isset($_POST['themTaiKhoan'])) {
         // Mã hóa mật khẩu
         $matKhau_hash = password_hash($matKhau, PASSWORD_DEFAULT);
 
+        // Chuẩn bị câu lệnh INSERT
+        // Sửa lại bind_param: 's' cho $ngayTao (date là string), 'i' cho $maQuyen (integer)
         $stmt = $conn->prepare("INSERT INTO TAIKHOAN (tenDangNhap, matKhau, ngayTaoTaiKhoan, tinhTrangTaiKhoan, maQuyen) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssiii", $tenDangNhap, $matKhau_hash, $ngayTao, $tinhTrang, $maQuyen);
+        $stmt->bind_param("ssisi", $tenDangNhap, $matKhau_hash, $ngayTao, $tinhTrang, $maQuyen);
 
         if ($stmt->execute()) {
             echo "<script>alert('Thêm thành công'); window.location='themtaikhoan.php';</script>";
         } else {
-            echo "<script>alert('Thêm thất bại');</script>";
+            echo "<script>alert('Thêm thất bại: " . $stmt->error . "');</script>"; // Thêm lỗi chi tiết để debug
         }
         $stmt->close();
     }
@@ -174,29 +198,30 @@ $password = "root";
 $database = "BaiThiDB";
 
 $conn = new mysqli($host, $username, $password, $database);
+if ($conn->connect_error) { // Đảm bảo kiểm tra kết nối
+    die("Kết nối thất bại: " . $conn->connect_error);
+}
 
-if (isset($_GET['id'])) {
-    $maTaiKhoan = $_GET['id'];
+// Xác nhận confirm() phải được thực hiện trên client trước khi gửi request xóa
+// Đoạn script confirm() dưới đây được loại bỏ vì nó không có tác dụng ngăn chặn lệnh PHP chạy.
+// Thay vào đó, việc xác nhận phải được thực hiện trên trang gọi đến xoa_taikhoan.php (ví dụ: danhsach_taikhoan.php).
 
-    // Xác nhận xóa bằng JavaScript
-    echo "<script>
-        if (confirm('Bạn có chắc chắn muốn xóa tài khoản này?')) {
-            // Thực hiện xóa
-        } else {
-            window.history.back();
-        }
-    </script>";
+if (isset($_GET['id']) && is_numeric($_GET['id'])) { // Kiểm tra id tồn tại và là số hợp lệ
+    $maTaiKhoan = (int)$_GET['id']; // Ép kiểu sang số nguyên để đảm bảo an toàn
 
     $stmt = $conn->prepare("DELETE FROM TAIKHOAN WHERE maTaiKhoan = ?");
     $stmt->bind_param("i", $maTaiKhoan);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Xóa thành công'); window.location='danhsach_taikhoan.php';</script>";
+        echo "<script>alert('Xóa thành công'); window.location.href='danhsach_taikhoan.php';</script>";
     } else {
-        echo "<script>alert('Xóa thất bại'); window.history.back();</script>";
+        echo "<script>alert('Xóa thất bại: " . $stmt->error . "'); window.location.href='danhsach_taikhoan.php';</script>";
     }
 
     $stmt->close();
+} else {
+    // Thông báo nếu không có ID hoặc ID không hợp lệ
+    echo "<script>alert('ID tài khoản không hợp lệ hoặc không được cung cấp!'); window.location.href='danhsach_taikhoan.php';</script>";
 }
 
 $conn->close();

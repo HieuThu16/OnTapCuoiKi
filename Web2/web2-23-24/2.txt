@@ -152,7 +152,7 @@ if (isset($_POST['btnthemsanpham'])) {
 
     // Thêm sản phẩm vào database
     $stmt = $conn->prepare("INSERT INTO SANPHAM (tenSanPham, Gia, giamGia, moTa, Hinh, maNhaSanXuat) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sddssI", $tensp, $gia, $giagiam, $mota, $hinh, $mansx);
+    $stmt->bind_param("sddssi", $tensp, $gia, $giagiam, $mota, $hinh, $mansx);
 
     if ($stmt->execute()) {
         echo "<script>alert('Thêm thành công'); window.location='ThemSP.php';</script>";

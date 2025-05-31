@@ -84,6 +84,31 @@ nhanh :có gì có số 0 thì gán 1 -> cũi trái + cũi trên = cũi hiện t
             rearrange(a , l , r -1  )
             
 
+10/ lẻ thì có a 
+    Power(a , n ) 
+        if ( n=  0 ) return 1 
+    x <- power(a , [n/2 ])
+    if x%2 == 1 return a*x*x 
+    else 
+        return x*x 
+
+
+11/ Khoảng cách gần nhất của 2 số trong 1 mảng  min a[1...n], l ,r 
+    if r - l == 1 then 
+        return a[r]-a[l]
+    else if r-l == 2 then 
+        return min(a[l+1]- a[l], a[r]-a[l+1])
+    else if     
+        m <- (l+r)/2 
+        d1 <- min(a, l , m )
+        d2 <- min (a , m+1 , r )
+        d3 <- trị ( a[m+1]- a[m])
+    
+    return MIN(d1, d2 , d3 )
+
+Sort 
+gọi ra a , 1 , n 
+
 
 
 FUNCTION PairSumDivideConquer(a[1..n], s):

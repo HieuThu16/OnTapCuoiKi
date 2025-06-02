@@ -20,6 +20,7 @@ Câu 10 :
     Là những thuộc tính của một đối tượng cho người dùng biết nó có thể được sử dụng như thế nào
 
 
+
     8 Quy tắc của Ben Shneiderman 
 -1 Phấn đấu cho sự nhất quán : Sử dụng thuật ngữ, biểu tượng , bố cục , màu sắc và hành vi nhất quán trong toàn bộ hệ thống
 -2 Cho phép người dùng thường xuyên sử dụng lối tắt: Cung cấp các phương thức nhanh hơn để thực hiện các tác vụ thường xuyên cho người dùng có kinh nghiệm
@@ -35,6 +36,30 @@ Nếu lỗi xảy ra, hệ thống cung cấp cơ chế đơn giản, dễ hiể
     Họ mong muốn chủ động bắt đầu hành động. 
 -8 Giảm tải bộ nhớ ngắn hạn : 
     Con người có bộ nhớ ngắn hạn hạn chế. Tránh yêu cầu người dùng nhớ từ phần này sang phần khác của giao diện
+
+câu 4 : 
+    Xác định nhu cầu : Hiểu ngừơi vẽ chân dung 
+        Mục tiêu: Hiểu rõ người dùng ( đặc điểm , nhu cầu ,mong muốn ) và bối cảnh sử dụng 
+        Kết quả : Chân dung , câu chuyện , kichj bản , bản đồ hành trình 
+
+    Thiết kế : Từ nghiên cứu ra khung + giao diện 
+        Mục tiêu : Từ nghiên cứu tạo ra thiết kế bao gồm : Cấu trúc thông tin , luồng tương tác và giao diện trực quan 
+        Kết quả : Khung sườn , sơ đồ luồng , phác thảo
+
+    Prototye 
+        Mục tiêu : Tạo bản thử nghiệm sau đó test để lấy phản hồi 
+        Kết quả : Bản thử nghiệm giấy , figma , adobe XD 
+
+    Đánh giá : test - chỉnh - lặp lại 
+
+
+
+
+
+
+
+
+
 
 câu 5: 
     - Tại sao việc hiểu rõ người dùng ( khả năng , thói quen, lỗi , sự đa dạng) lại quan trọng?

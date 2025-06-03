@@ -1,265 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Calendar</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Calendar</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+      .calendar-container {
+        text-align: center;
+        width: 100%;
+        max-width: 800px;
+      }
 
-    .calendar-container {
-      text-align: center;
-      width: 100%;
-      max-width: 800px;
-    }
+      .top-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
 
-    .top-navigation {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-    }
+      .top-navigation a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px;
+        cursor: pointer;
+      }
 
-    .top-navigation a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px;
-      cursor: pointer;
-    }
+      .calendar-wrapper {
+        border-top: 4px solid #c1dffe;
+        padding: 10px;
+      }
 
-    .calendar-wrapper {
-      border-top: 4px solid #c1dffe;
-      padding: 10px;
-    }
+      .calendar-header {
+        border: 1px solid #333;
+        position: relative;
+        margin-bottom: -1px;
+      }
 
-    .calendar-header {
-      border: 1px solid #333;
-      position: relative;
-      margin-bottom: -1px;
-    }
+      .month-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 10px 0;
+      }
 
-    .month-header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      width: fit-content;
-      padding: 10px 0;
-    }
+      .month-header h2 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0 20px;
+      }
 
-    .month-header h2 {
-      font-size: 24px;
-      margin: 0;
-      padding: 0 20px;
-    }
+      .nav-buttons {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+      }
 
-    .nav-buttons {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-    }
+      .nav-buttons button {
+        background-color: #f0f0f0;
+        border: 1px solid #666;
+        cursor: pointer;
+        font-size: 24px;
+        width: 14.3%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-    .nav-buttons button {
-      background-color: #f0f0f0;
-      border: 1px solid #666;
-      cursor: pointer;
-      font-size: 24px;
-      width: 14.3%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+      .nav-buttons button:hover {
+        background-color: #e0e0e0;
+      }
 
-    .nav-buttons button:hover {
-      background-color: #e0e0e0;
-    }
+      .prev-button {
+        left: 0;
+      }
 
-    .prev-button {
-      left: 0;
-    }
+      .next-button {
+        right: 0;
+      }
 
-    .next-button {
-      right: 0;
-    }
+      .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
 
-    .calendar-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+      .calendar-table th,
+      .calendar-table td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+        height: 60px;
+        width: 14.28%;
+      }
 
-    .calendar-table th,
-    .calendar-table td {
-      border: 1px solid #333;
-      padding: 10px;
-      text-align: center;
-      height: 60px;
-      width: 14.28%;
-    }
+      .calendar-table th {
+        font-style: italic;
+        font-size: 18px;
+      }
 
-    .calendar-table th {
-      font-style: italic;
-      font-size: 18px;
-    }
+      .calendar-table img {
+        height: 40px;
+        max-width: 100%;
+      }
 
-    .calendar-table img {
-      height: 40px;
-      max-width: 100%;
-    }
+      .day-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
 
-    .day-number {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
+      .cat-number {
+        display: inline-block;
+        margin: 0;
+      }
+    </style>
+  </head>
 
-    .cat-number {
-      display: inline-block;
-      margin: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="calendar-container">
-    <div class="top-navigation">
-      <a onclick="previousMonth()">Tháng trước</a>
-      <a onclick="resetToCurrentMonth()">Mặc định tháng hiện tại</a>
-      <a onclick="nextMonth()">Tháng sau</a>
-    </div>
-
-    <div class="calendar-wrapper">
-      <div class="calendar-header">
-        <div class="month-header">
-          <h2 id="month-year"></h2>
-        </div>
-        <div class="nav-buttons">
-          <button class="prev-button" onclick="previousMonth()"> < </button>
-              <button class="next-button" onclick="nextMonth()"> > </button>
-        </div>
+  <body>
+    <div class="calendar-container">
+      <div class="top-navigation">
+        <a onclick="previousMonth()">Tháng trước</a>
+        <a onclick="resetToCurrentMonth()">Mặc định tháng hiện tại</a>
+        <a onclick="nextMonth()">Tháng sau</a>
       </div>
 
-      <table class="calendar-table">
-        <thead>
-          <tr>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
-          </tr>
-        </thead>
-        <tbody id="calendar-body">
-        </tbody>
-      </table>
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <div class="month-header">
+            <h2 id="month-year"></h2>
+          </div>
+          <div class="nav-buttons">
+            <button class="prev-button" onclick="previousMonth()"><</button>
+            <button class="next-button" onclick="nextMonth()">></button>
+          </div>
+        </div>
+
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+      </div>
     </div>
-  </div>
 
-  <script>
-    const catNumberImages = {
-      '0': 'imgs/0.jpg',
-      '1': 'imgs/1.jpg',
-      '2': 'imgs/2.jpg',
-      '3': 'imgs/3.jpg',
-      '4': 'imgs/4.jpg',
-      '5': 'imgs/5.jpg',
-      '6': 'imgs/6.jpg',
-      '7': 'imgs/7.jpg',
-      '8': 'imgs/8.jpg',
-      '9': 'imgs/9.jpg'
-    };
+    <script>
+      const catNumberImages = {
+        0: "imgs/0.jpg",
+        1: "imgs/1.jpg",
+        2: "imgs/2.jpg",
+        3: "imgs/3.jpg",
+        4: "imgs/4.jpg",
+        5: "imgs/5.jpg",
+        6: "imgs/6.jpg",
+        7: "imgs/7.jpg",
+        8: "imgs/8.jpg",
+        9: "imgs/9.jpg",
+      };
 
-    let currentDate = new Date();
-    currentDate.setDate(1);
+      let currentDate = new Date();
+      currentDate.setDate(1);
 
-    function renderCalendar() {
-      const calendarBody = document.getElementById('calendar-body');
-      const monthYear = document.getElementById('month-year');
-      calendarBody.innerHTML = '';
+      function renderCalendar() {
+        const calendarBody = document.getElementById("calendar-body");
+        const monthYear = document.getElementById("month-year");
+        calendarBody.innerHTML = "";
 
-      const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-      ];
-      monthYear.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        monthYear.textContent = `${
+          monthNames[currentDate.getMonth()]
+        } ${currentDate.getFullYear()}`;
 
-      const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
-      const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+        const firstDay = new Date(
+          currentDate.getFullYear(),
+          currentDate.getMonth(),
+          1
+        ).getDay();
+        const daysInMonth = new Date(
+          currentDate.getFullYear(),
+          currentDate.getMonth() + 1,
+          0
+        ).getDate();
 
-      const adjustedFirstDay = (firstDay === 0 ? 6 : firstDay - 1);
+        const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
 
-      let date = 1;
-      let tableHTML = '';
+        let date = 1;
+        let tableHTML = "";
 
-      for (let i = 0; i < 6; i++) {
-        let row = '<tr>';
+        for (let i = 0; i < 6; i++) {
+          let row = "<tr>";
 
-        for (let j = 0; j < 7; j++) {
-          if (i === 0 && j < adjustedFirstDay) {
-            row += '<td></td>';
-          } else if (date > daysInMonth) {
-            row += '<td></td>';
-          } else {
-            row += `<td>
+          for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < adjustedFirstDay) {
+              row += "<td></td>";
+            } else if (date > daysInMonth) {
+              row += "<td></td>";
+            } else {
+              row += `<td>
                                 <div class="day-number">
                                     ${createCatNumberImages(date)}
                                 </div>
                               </td>`;
-            date++;
+              date++;
+            }
+          }
+
+          row += "</tr>";
+          tableHTML += row;
+
+          if (date > daysInMonth) {
+            break;
           }
         }
 
-        row += '</tr>';
-        tableHTML += row;
+        calendarBody.innerHTML = tableHTML;
+      }
 
-        if (date > daysInMonth) {
-          break;
+      function createCatNumberImages(day) {
+        const dayStr = day.toString();
+        let imagesHTML = "";
+
+        for (let digit of dayStr) {
+          imagesHTML += `<img class="cat-number" src="${catNumberImages[digit]}" alt="${digit}">`;
         }
+
+        return imagesHTML;
       }
 
-      calendarBody.innerHTML = tableHTML;
-    }
-
-    function createCatNumberImages(day) {
-      const dayStr = day.toString();
-      let imagesHTML = '';
-
-      for (let digit of dayStr) {
-        imagesHTML += `<img class="cat-number" src="${catNumberImages[digit]}" alt="${digit}">`;
+      function previousMonth() {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
       }
 
-      return imagesHTML;
-    }
+      function nextMonth() {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+      }
 
-    function previousMonth() {
-      currentDate.setMonth(currentDate.getMonth() - 1);
+      function resetToCurrentMonth() {
+        currentDate = new Date();
+        currentDate.setDate(1);
+        renderCalendar();
+      }
       renderCalendar();
-    }
-
-    function nextMonth() {
-      currentDate.setMonth(currentDate.getMonth() + 1);
-      renderCalendar();
-    }
-
-    function resetToCurrentMonth() {
-      currentDate = new Date();
-      currentDate.setDate(1);
-      renderCalendar();
-    }
-    renderCalendar();
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

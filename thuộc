@@ -112,7 +112,7 @@ nhanh :có gì có số 0 thì gán 1 -> cũi trái + cũi trên = cũi hiện t
         d1 <- min(a, l , m )
         d2 <- min (a , m+1 , r )
         d3 <- trị ( a[m+1]- a[m])
-    
+    s
     return MIN(d1, d2 , d3 )
 
 Sort 
